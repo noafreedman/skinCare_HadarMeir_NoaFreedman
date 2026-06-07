@@ -1,23 +1,86 @@
 ﻿<!doctype html>
-<html lang="">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="utf-8" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    <title>Skin Care - צור קשר</title>
+    <meta name="description" content="דף צור קשר - אתר Skin Care. צרו קשר עם נעה והדר לכל שאלה והתייעצות" />
+    <meta name="keywords" content="צור קשר, טיפוח, יצירת קשר, המלצות, Skin Care" />
+    <meta name="author" content="נעה והדר" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <!-- CSS -->
-    <!--<link href="styles/reset.css" rel="stylesheet" />-->
     <link href="styles/myStyle.css" rel="stylesheet" />
 
-    <!-- Scripts -->
-    <script src="jScripts/JavaScript.js" type="text/javascript">  </script>
+    <script src="jScripts/JavaScript.js" type="text/javascript"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>check</h1>
-        <h1>check2</h1>
+<div id="container">
+
+    <header>
+        <div class="logo"><span>Skin Care</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">דף הבית</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="diagnostic.html">אבחון עור (JS)</a></li>
+                <li><a href="contactUs.html" class="active">צור קשר</a></li>
+                <li><a href="sitemap.html">מפת האתר</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">דף הבית</a> &gt; <span>צור קשר</span>
     </div>
+
+    <main>
+        <section class="contact-section">
+            <h1>צור קשר</h1>
+
+            <div class="form-container">
+                <p class="form-intro">נשמח לשמוע מכן! מלאו את הפרטים ונחזור אליכן בהקדם.</p>
+
+                <form action="#" method="POST">
+
+                    <div class="form-group">
+                        <label for="fullName">שם מלא <span class="required-star">*</span></label>
+                        <input type="text" id="fullName" name="fullName" placeholder="הקלידי את שמך המלא" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userEmail">כתובת אימייל <span class="required-star">*</span></label>
+                        <input type="email" id="userEmail" name="userEmail" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userPhone">מספר טלפון</label>
+                        <input type="tel" id="userPhone" name="userPhone" placeholder="05X-XXXXXXX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">נושא הפנייה <span class="required-star">*</span></label>
+                        <select id="interest" name="interest" required>
+                            <option value="" disabled selected>בחרי נושא...</option>
+                            <option value="recommendation">בקשת המלצה על מוצר</option>
+                            <option value="cooperation">שיתוף פעולה</option>
+                            <option value="feedback">משוב על האתר</option>
+                            <option value="other">אחר</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userMessage">תוכן ההודעה <span class="required-star">*</span></label>
+                        <textarea id="userMessage" name="userMessage" rows="5" placeholder="כתבי לנו כאן את הודעתך..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">שליחת הודעה ✨</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Skin Care - כל הזכויות שמורות לנעה והדר | הפקולטה לטכנולוגיות למידה, HIT</p>
+    </footer>
+
+</div>
 </body>
 </html>
