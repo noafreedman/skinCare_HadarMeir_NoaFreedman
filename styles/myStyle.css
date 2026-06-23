@@ -2,12 +2,11 @@
     direction: rtl;
 }
 
-
 header {
-    background-color: #ffe6eb; /* צבע ורוד בהיר - מוזמנות לשנות את הגוון */
+    background-color: #ffe6eb; /* צבע ורוד בהיר */
     padding: 20px 40px;        /* מרווח פנימי שיוצר את צורת המלבן */
     text-align: center;        /* מרכז את הכותרת בתוך המלבן */
-    border-radius: 8px;        /* פינות מעוגלות עדינות (אופציונלי - אפשר למחוק אם תרצו מלבן חד) */
+    border-radius: 8px;        /* פינות מעוגלות עדינות */
     margin-bottom: 30px;       /* מרווח בין המלבן של ה-header לתוכן שמתחתיו */
     box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* צל עדין מאוד שמוסיף עומק */
 }
@@ -17,4 +16,14 @@ header h1 {
     margin: 0;                 /* מאפס מרווחים דיפולטיביים של הדפדפן */
     color: #333333;            /* צבע הטקסט של הכותרת */
     font-size: 2rem;           /* גודל הגופן */
+}
+
+/* העיצוב החדש שהתווסף: צמצום הלוגואים לימין וקביעת גודל 800x600 */
+.ourLogo, .college-logo, .logo img {
+    width: 300px;              /* רוחב הלוגו */
+    height: 400px;             /* גובה הלוגו */
+    display: block;            /* מאפשר שימוש ב-margins ליישור */
+    margin-right: 0;           /* הצמדה מוחלטת לימין */
+    margin-left: auto;         /* דחיפת שאר המרווח לשמאל */
+    object-fit: contain;       /* שומר על פרופורציות התמונה שלא תתעוות */
 }
