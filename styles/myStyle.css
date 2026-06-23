@@ -27,9 +27,29 @@ header h1 {
     margin-left: auto;         /* דחיפת שאר המרווח לשמאל */
     object-fit: contain;       /* שומר על פרופורציות התמונה שלא תתעוות */
 }
-#aboutChoice {
-    width: 300px !important;
-    height: 400px !important;
+.aboutChoice {
+    width: 300px;
+    height: 400px;
+    object-fit: contain; /* שומר על פרופורציות התמונה שלא תתעוות */
+    display: inline-block; /* מאפשר להן לעמוד אחת ליד השנייה */
+    vertical-align: top;   /* מיישר את שני הטורים מלמעלה שיהיו באותו קו */
+    margin: 10px 20px;     /* מוסיף מרווח יפה בין שתי התמונות */
+    text-align: center;
+
+}
+#allProducts {
+    width: 400px;
+    height: 500px;
+    object-fit: contain; /* שומר על פרופורציות התמונה שלא תתעוות */
+    display: block;       /* הופך את התמונה לבלוק כדי שהיא תוכל להתמרכז */
+    margin-right: auto;   /* מרווח אוטומטי מימין */
+    margin-left: auto;
+}
+.acneSkinCare {
+    width: 200px;
+    height: 300px;
     object-fit: contain; /* שומר על פרופורציות התמונה שלא תתעוות */
     display: inline-block; /* מאפשר להן לעמוד אחת ליד השנייה אם צריך */
+    
 }
+    
