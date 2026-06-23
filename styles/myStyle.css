@@ -27,3 +27,9 @@ header h1 {
     margin-left: auto;         /* דחיפת שאר המרווח לשמאל */
     object-fit: contain;       /* שומר על פרופורציות התמונה שלא תתעוות */
 }
+#aboutChoice {
+    width: 300px !important;
+    height: 400px !important;
+    object-fit: contain; /* שומר על פרופורציות התמונה שלא תתעוות */
+    display: inline-block; /* מאפשר להן לעמוד אחת ליד השנייה אם צריך */
+}
