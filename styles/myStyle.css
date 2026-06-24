@@ -1,55 +1,146 @@
 ﻿body {
     direction: rtl;
 }
+/* הגדרות בסיס ויישור האתר */
+body {
+    direction: rtl;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fcfcfc;
+}
 
+/* --- עיצוב ה-HEADER האחיד והמסונכרן לכל האתר --- */
 header {
     background-color: #ffe6eb; /* צבע ורוד בהיר */
-    padding: 20px 40px;        /* מרווח פנימי שיוצר את צורת המלבן */
-    text-align: center;        /* מרכז את הכותרת בתוך המלבן */
-    border-radius: 8px;        /* פינות מעוגלות עדינות */
-    margin-bottom: 30px;       /* מרווח בין המלבן של ה-header לתוכן שמתחתיו */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* צל עדין מאוד שמוסיף עומק */
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+    /* סידור האלמנטים אחד מתחת לשני (טור) וממורכזים */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* מרווח קבוע בין הלוגו -> לניווט -> לכותרת */
 }
 
-/* עיצוב כותרת ה-h1 שנמצאת בתוך ה-header */
+/* שורת הלוגו - התיקון שמכריח אותו להיצמד לימין למרות שאר המרכוס */
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* מצמיד את תוכן השורה לימין */
+    align-self: flex-start;      /* מונע מה-header למרכז את הדיב הזה */
+}
+
+/* הגדלת לוגו האתר (K-GLOW) שייראה בולט וברור */
+.ourLogo {
+    width: 140px !important;     /* הגדלנו ל-140 פיקסלים */
+    height: auto !important;     /* הגובה מתאים את עצמו אוטומטית לשמירה על הפרופורציות */
+    display: block;
+}
+
+/* תפריט הניווט - ממוקם מעל הכותרת וממורכז */
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* מרכז את התפריט אופקית */
+    margin-bottom: 5px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* מסדר את הלינקים בשורה מאוזנת */
+    gap: 25px;     /* רווח שווה בין כפתורי הניווט */
+}
+
+header nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+
+header nav a:hover, header nav a.active {
+    color: #ff6b8b; /* הדגשת העמוד הנוכחי או במעבר עכבר */
+}
+
+/* כותרת ה-h1 - ממורכזת לחלוטין למרכז המלבן ומתחת לניווט */
 header h1 {
-    margin: 0;                 /* מאפס מרווחים דיפולטיביים של הדפדפן */
-    color: #333333;            /* צבע הטקסט של הכותרת */
-    font-size: 2rem;           /* גודל הגופן */
-}
-
-/* העיצוב החדש שהתווסף: צמצום הלוגואים לימין וקביעת גודל 800x600 */
-.ourLogo, .college-logo, .logo img {
-    width: 300px;              /* רוחב הלוגו */
-    height: 400px;             /* גובה הלוגו */
-    display: block;            /* מאפשר שימוש ב-margins ליישור */
-    margin-right: 0;           /* הצמדה מוחלטת לימין */
-    margin-left: auto;         /* דחיפת שאר המרווח לשמאל */
-    object-fit: contain;       /* שומר על פרופורציות התמונה שלא תתעוות */
-}
-.aboutChoice {
-    width: 300px;
-    height: 400px;
-    object-fit: contain; /* שומר על פרופורציות התמונה שלא תתעוות */
-    display: inline-block; /* מאפשר להן לעמוד אחת ליד השנייה */
-    vertical-align: top;   /* מיישר את שני הטורים מלמעלה שיהיו באותו קו */
-    margin: 10px 20px;     /* מוסיף מרווח יפה בין שתי התמונות */
+    margin: 0;
+    color: #333333;
+    font-size: 2.2rem;
     text-align: center;
+}
 
+/* --- לוגו HIT בפוטר - צמוד לימין למטה --- */
+footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: ltr; /* הופך כיוון כדי שהלוגו ייצמד לימין הפיזי של הדף */
 }
-#allProducts {
-    width: 400px;
-    height: 500px;
-    object-fit: contain; /* שומר על פרופורציות התמונה שלא תתעוות */
-    display: block;       /* הופך את התמונה לבלוק כדי שהיא תוכל להתמרכז */
-    margin-right: auto;   /* מרווח אוטומטי מימין */
-    margin-left: auto;
+
+footer p {
+    direction: rtl;
+    margin: 0;
 }
-.acneSkinCare {
-    width: 200px;
-    height: 300px;
-    object-fit: contain; /* שומר על פרופורציות התמונה שלא תתעוות */
-    display: inline-block; /* מאפשר להן לעמוד אחת ליד השנייה אם צריך */
-    
+
+.college-logo {
+    width: 120px !important;
+    height: auto !important;
+    display: block;
 }
-    
+
+/* --- סידור תוכן עמוד האודות --- */
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* הגבלת הטקסט עד לחצי/אמצע העמוד */
+.about-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+    line-height: 1.6;
+}
+
+/* אזור התמונות - אחת ליד השנייה */
+.about-images {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    min-width: 300px;
+    justify-content: center;
+}
+
+.image-item {
+    margin: 0;
+    text-align: center;
+    max-width: 220px;
+}
+
+.aboutChoice {
+    width: 200px !important;
+    height: 280px !important;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.image-caption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+}
