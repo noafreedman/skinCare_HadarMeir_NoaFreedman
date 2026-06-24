@@ -1,7 +1,6 @@
 ﻿body {
     direction: rtl;
 }
-/* הגדרות בסיס ויישור האתר */
 /* ייבוא פונט רוביק מ-Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
@@ -30,11 +29,11 @@ header {
 }
 
 /* שורת הלוגו - התיקון שמכריח אותו להיצמד לימין למרות שאר המרכוס */
-.logo {
+.logo, .logo-link {
     width: 100%;
     display: flex;
     justify-content: flex-start; /* מצמיד את תוכן השורה לימין */
-    align-self: flex-start;      /* מונע מה-header למרכז את הדיב הזה */
+    align-self: flex-start;      /* מונע מה-header למרכז את הדיב/קישור הזה */
 }
 
 /* הגדלת לוגו האתר (K-GLOW) שייראה בולט וברור */
@@ -104,7 +103,6 @@ footer p {
     width: 120px !important;
     height: auto !important;
     display: block;
-    /* הוסר הפילטר הלבן כדי שהלוגו יחזור לצבעיו המקוריים וייראה טוב בתוך המלבן החלול */
 }
 
 /* --- סידור תוכן עמוד האודות --- */
@@ -152,4 +150,22 @@ footer p {
     font-size: 0.9rem;
     color: #555;
     margin-top: 5px;
+}
+
+/* ======================================================= */
+/* --- עיצוב תמונת עמוד הבית (all_products.png) המוקטנת --- */
+/* ======================================================= */
+#allProducts {
+    width: 280px !important;   /* הקטנו לרוחב קומפקטי ומתאים למסך */
+    height: auto !important;   /* שומר על הפרוטפורציות המקוריות של התמונה */
+    object-fit: contain;
+    display: block;
+    margin: 20px auto;         /* ממרכז את התמונה יפה תחת התוכן של עמוד הבית */
+}
+
+.acneSkinCare {
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+    display: inline-block;
 }
