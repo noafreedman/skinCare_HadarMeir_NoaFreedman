@@ -38,8 +38,8 @@ header {
 
 /* הגדלת לוגו האתר (K-GLOW) שייראה בולט וברור */
 .ourLogo {
-    width: 140px !important;
-    height: auto !important;
+    width: 250px;
+    height: auto;
     display: block;
 }
 
@@ -100,8 +100,8 @@ footer p {
 }
 
 .college-logo {
-    width: 120px !important;
-    height: auto !important;
+    width: 120px;
+    height: auto;
     display: block;
 }
 
