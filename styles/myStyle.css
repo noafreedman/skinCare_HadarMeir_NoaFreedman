@@ -2,9 +2,13 @@
     direction: rtl;
 }
 /* הגדרות בסיס ויישור האתר */
+/* ייבוא פונט רוביק מ-Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* הגדרות בסיס ויישור האתר */
 body {
     direction: rtl;
-    font-family: sans-serif;
+    font-family: 'Rubik', sans-serif; /* הגדרת הפונט לכל האתר */
     margin: 0;
     padding: 20px;
     background-color: #fcfcfc;
@@ -35,8 +39,8 @@ header {
 
 /* הגדלת לוגו האתר (K-GLOW) שייראה בולט וברור */
 .ourLogo {
-    width: 140px !important;     /* הגדלנו ל-140 פיקסלים */
-    height: auto !important;     /* הגובה מתאים את עצמו אוטומטית לשמירה על הפרופורציות */
+    width: 140px !important;
+    height: auto !important;
     display: block;
 }
 
@@ -76,11 +80,13 @@ header h1 {
     text-align: center;
 }
 
-/* --- לוגו HIT בפוטר - צמוד לימין למטה --- */
+/* --- עיצוב ה-FOOTER כמלבן חלול בצבע של ה-header --- */
 footer {
     margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
+    background-color: transparent;    /* ללא צבע רקע (שקוף/חלול) */
+    border: 2px solid #ffe6eb;        /* מסגרת בצבע הורוד של ה-header */
+    padding: 15px 30px;               /* יצירת מרווח פנימי למלבן */
+    border-radius: 8px;               /* פינות מעוגלות התואמות להדר */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,12 +96,15 @@ footer {
 footer p {
     direction: rtl;
     margin: 0;
+    color: #444444;                   /* צבע טקסט כהה וקריא */
+    font-weight: 500;
 }
 
 .college-logo {
     width: 120px !important;
     height: auto !important;
     display: block;
+    /* הוסר הפילטר הלבן כדי שהלוגו יחזור לצבעיו המקוריים וייראה טוב בתוך המלבן החלול */
 }
 
 /* --- סידור תוכן עמוד האודות --- */
