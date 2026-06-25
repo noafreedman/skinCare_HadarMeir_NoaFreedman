@@ -259,8 +259,7 @@ footer p {
 
 
 
-
-.purchase-buttons a, #formBtn, .card-link, .mapColumn > :first-child, .pageBtn:hover {
+.purchase-buttons a, #formBtn, .card-link, .mapColumn > :first-child, .pageBtn:hover{
     text-decoration: none;
     background-color: #ff6b8b;
     color: #fcfcfc !important; /* דואג שהטקסט תמיד יהיה בהיר על הורוד הכהה */
