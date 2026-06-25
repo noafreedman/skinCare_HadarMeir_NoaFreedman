@@ -363,6 +363,7 @@ input , textarea , select {
     line-height: 1.6;
     color: #444;
 }
+<<<<<<< Updated upstream
 /* ======================================================= */
 /* --- עיצוב עמוד האבחון האינטראקטיבי - תיקון פריסה וריווח --- */
 /* ======================================================= */
@@ -533,4 +534,58 @@ input , textarea , select {
     line-height: 1.7;
     max-width: 1000px;
     text-align: right;
+=======
+
+body {
+    direction: rtl; /* כיוון כתיבה מימין לשמאל */
+    margin: 0;
+    overflow-x: auto; /* מוסיף פס גלילה אופקי רק אם המסך צר מדי והרשימה ארוכה */
+}
+
+.siteMapPageFrame {
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* מוודא שהבלוקים מסתדרים בשורה אחת */
+    flex-wrap: nowrap;   /* מונע מהבלוקים לרדת שורה */
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* הגדרות הטורים */
+.pagesGroup {
+    width: 305px;
+    flex-shrink: 0; /* מונע מהטורים להתכווץ ולהימחץ כשאין מקום במסך */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* עיצוב הבן הראשון בכל טור (הכותרת הסגולה) */
+.pagesGroup > :first-child{
+    border-radius: 8px;
+    background-color: #9d76ff; /* סגול */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* עיצוב שאר הבנים (הכרטיסיות הוורודות) */
+.skin1004-wrapper {
+    border-radius: 8px;
+    background-color: #ff7676; /* ורוד/קורל */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.pageName {
+    width: 100%;
+    color: #000;
+>>>>>>> Stashed changes
 }
