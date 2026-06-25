@@ -1,25 +1,25 @@
-﻿body {
-    direction: rtl;
-}
-/* ייבוא פונט רוביק מ-Google Fonts */
+﻿
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-/* הגדרות בסיס ויישור האתר */
 body {
     direction: rtl;
-    font-family: 'Rubik', sans-serif; /* הגדרת הפונט לכל האתר */
-    margin: 0;
-    padding: 20px;
     background-color: #fcfcfc;
+    background-image: url('../img/BG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;     
+    background-position: center;
+    font-family: 'Rubik', sans-serif;
+    color: #4c370d;
+    padding: 20px;
 }
 
-/* --- עיצוב ה-HEADER האחיד והמסונכרן לכל האתר --- */
 header {
-    background-color: #ffe6eb; /* צבע ורוד בהיר */
+    background-color: #ffe6eb; 
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(76,55,13,0.05);
 
     /* סידור האלמנטים אחד מתחת לשני (טור) וממורכזים */
     display: flex;
@@ -29,19 +29,20 @@ header {
 }
 
 /* שורת הלוגו - התיקון שמכריח אותו להיצמד לימין למרות שאר המרכוס */
-.logo, .logo-link {
+ .logo-link {
     width: 100%;
     display: flex;
     justify-content: flex-start; /* מצמיד את תוכן השורה לימין */
     align-self: flex-start;      /* מונע מה-header למרכז את הדיב/קישור הזה */
 }
 
-/* הגדלת לוגו האתר (K-GLOW) שייראה בולט וברור */
 .ourLogo {
     width: 250px;
     height: auto;
     display: block;
 }
+
+
 
 /* תפריט הניווט - ממוקם מעל הכותרת וממורכז */
 header nav {
@@ -50,39 +51,96 @@ header nav {
     justify-content: center; /* מרכז את התפריט אופקית */
     margin-bottom: 5px;
 }
+/* 1. נגדיר את פריט האבא כ"עוגן" יחסי עבור התפריט הנפתח */
+nav ul li.dropdown {
+    position: relative;
+}
+
+/* 2. נחביא את התפריט הנפתח כברירת מחדל ונמקם אותו מתחת לאבא */
+nav ul li .dropdown-menu {
+    display: none;             /* מחביא את התפריט */
+    position: absolute;        /* מאפשר לו "לצוף" מתחת לתפריט הראשי */
+    top: 100%;                 /* מציב אותו בדיוק מתחת ללינק האבא */
+    right: 0;                  /* מיישר אותו לימין (בגלל שהאתר ב-RTL) */
+    background-color: #fcfcfc;   /* צבע רקע לתפריט הנפתח */
+    list-style-type: none;     /* מעלים את הנקודות של הרשימה */
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* צל קטן שייראה צף */
+    border-radius: 8px;
+}
+
+/* 3. הקסם: שימוש בסלקטור צאצא ומצב מדומיין (:hover) מתוך השיעור! */
+/* ברגע שעושים hover על ה-li של האבא -> תציג את ה-dropdown-menu שבתוכו */
+nav ul li.dropdown:hover .dropdown-menu {
+    display: block;            /* מציג את התפריט החבוי */
+    ;
+}
+
+/* 4. עיצוב הלינקים הפנימיים בתוך התפריט הנפתח */
+nav ul li .dropdown-menu li  {
+    display: block;
+    padding: 8px 15px;
+    white-space: nowrap;       /* מונע מהטקסט להישבר לשתי שורות */
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.breadcrumb > a {
+    text-decoration: none;
+    color: #4c370d;
+}
+
+.currentPage{
+    font-weight: bold;
+}
+
+/* שינוי צבע ברקע כשעוברים על האופציות בתוך התפריט הנפתח */
+nav ul li .dropdown-menu li:hover {
+    background-color: #f5f5f5;
+}
 
 header nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex; /* מסדר את הלינקים בשורה מאוזנת */
     gap: 25px;     /* רווח שווה בין כפתורי הניווט */
 }
 
-header nav a {
+header nav a, li.active {
     text-decoration: none;
-    color: #444;
+    color: #4c370d;
     font-weight: bold;
     font-size: 1.05rem;
     transition: color 0.2s;
 }
 
-header nav a:hover, header nav a.active {
+header nav a:hover, header nav a.active, li.active, .currentPage {
     color: #ff6b8b; /* הדגשת העמוד הנוכחי או במעבר עכבר */
+}
+/* וב-CSS מוסיפים חוק קטן (שימוש מעולה בסלקטור צאצא מתוך המצגת!): */
+nav ul li.dropdown > a {
+    cursor: default; /* הופך את העכבר לחץ רגיל במקום יד לחיצה */
+}
+
+/* כשהעכבר מרחף על הקישור הלא פעיל */
+.disabled-link:hover {
+    cursor: not-allowed; /* הופך את הסמן לסמל של "אין כניסה" */
+    color: #ffafc0;         /* אופציונלי: הופך את הטקסט לאפור בהיר כדי לשדר שהוא חסום */
 }
 
 /* כותרת ה-h1 - ממורכזת לחלוטין למרכז המלבן ומתחת לניווט */
 header h1 {
     margin: 0;
-    color: #333333;
     font-size: 2.2rem;
     text-align: center;
 }
-
+main, .breadcrumb{
+    margin: auto 50px;
+}
 /* --- עיצוב ה-FOOTER כמלבן חלול בצבע של ה-header --- */
 footer {
     margin-top: 50px;
-    background-color: transparent;    /* ללא צבע רקע (שקוף/חלול) */
+    background-color: #fcfcfc;    /* ללא צבע רקע (שקוף/חלול) */
     border: 2px solid #ffe6eb;        /* מסגרת בצבע הורוד של ה-header */
     padding: 15px 30px;               /* יצירת מרווח פנימי למלבן */
     border-radius: 8px;               /* פינות מעוגלות התואמות להדר */
@@ -130,11 +188,18 @@ footer p {
     min-width: 300px;
     justify-content: center;
 }
-
 .image-item {
-    margin: 0;
-    text-align: center;
-    max-width: 220px;
+    display: flex;
+    flex-direction: column;   /* מסדר את התמונה והטקסט זה תחת זה */
+    align-items: center;      /* ממרכז אותם אופקית בצורה מושלמת */
+    text-align: center;       /* ממרכז את שורות הטקסט עצמן */
+    margin: 0;                /* מוחק את הריווח המובנה של הדפדפן שדחף את התמונות! */
+}
+
+/* אופציונלי: מוסיף רווח קטן בין התמונה לטקסט שמתחתיה */
+.image-caption {
+    margin-top: 15px;
+    line-height: 1.5;
 }
 
 .aboutChoice {
@@ -148,8 +213,9 @@ footer p {
 
 .image-caption {
     font-size: 0.9rem;
-    color: #555;
+    color: #4c370d;
     margin-top: 5px;
+    width: 140px;
 }
 
 /* ======================================================= */
