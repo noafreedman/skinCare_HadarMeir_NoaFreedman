@@ -315,3 +315,89 @@ input , textarea , select {
     max-width: 800px;
 text-align: center;
 }
+/* --- מדור הטיפים המשודרג בעמוד הבית --- */
+.tips-section {
+    margin: 50px auto;
+    max-width: 900px; /* רוחב מושלם לשני טורים */
+    padding: 0 20px;
+}
+
+/* כותרת המדור */
+.section-title {
+    text-align: center;
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+/* פריסת שני הטיפים זה לצד זה */
+.tips-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap; /* מאפשר להם לרדת שורה במסכים קטנים כמו טלפון */
+}
+
+/* עיצוב כרטיסיית טיפ בודדת */
+.tip-card {
+    flex: 1;
+    min-width: 280px; /* מונע מהם להתכווץ מדי */
+    background-color: #fff0f3; /* ורוד בהיר ורך */
+    border-right: 5px solid #ff6b8b; /* פס הדגשה ורוד בצד ימין */
+    border-radius: 8px;
+    padding: 22px;
+    box-shadow: 0 4px 12px rgba(255, 107, 139, 0.06);
+}
+
+/* תגית המספר של הטיפ */
+.tip-card .tip-badge {
+    display: inline-block;
+    background-color: #ff6b8b;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.tip-card h4 {
+    margin: 0 0 10px 0;
+    color: #222;
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.tip-card p {
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* הדגשות בתוך הטיפים */
+.tip-card p strong {
+    color: #ff6b8b;
+}
+/* --- עיצוב הקישורים ככפתורים בעמוד הבית --- */
+.card-link {
+    display: inline-block;
+    background-color: #ffe6eb;    /* רקע ורוד בהיר כמו ה-header */
+    color: #444444;               /* צבע הטקסט של הכפתור */
+    text-decoration: none;        /* מוריד את קו התחתון הסגול של הקישור */
+    padding: 10px 20px;           /* מרווח פנימי שיוצר את צורת הכפתור */
+    border: 1px solid #fca1b0;    /* מסגרת ורדרדה עדינה */
+    border-radius: 20px;          /* פינות מעוגלות ויפות */
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-top: 10px;             /* מרווח קטן מהטקסט שמעל הכפתור */
+    transition: all 0.2s ease;    /* אנימציה חלקה למעבר עכבר */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+/* אפקט החלקת עכבר (Hover) על הכפתור */
+.card-link:hover {
+    background-color: #ff6b8b;    /* הופך לורוד כהה יותר במעבר עכבר */
+    color: #ffffff;               /* הטקסט הופך ללבן */
+    box-shadow: 0 4px 8px rgba(255, 107, 139, 0.2); /* צל קטן שנותן נפח */
+    transform: translateY(-1px);  /* הרמה קטנה של הכפתור שנותנת תחושה אינטראקטיבית */
+}
