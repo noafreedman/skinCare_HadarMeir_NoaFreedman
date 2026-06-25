@@ -363,7 +363,7 @@ input , textarea , select {
     line-height: 1.6;
     color: #444;
 }
-<<<<<<< Updated upstream
+
 /* ======================================================= */
 /* --- עיצוב עמוד האבחון האינטראקטיבי - תיקון פריסה וריווח --- */
 /* ======================================================= */
@@ -540,3 +540,60 @@ input , textarea , select {
     max-width: 1000px;
     text-align: right;
 }
+
+.frame-parent {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 26px;
+    color: #000;
+    font-family: Inter;
+}
+.frame-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.frame-wrapper {
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.wrapper {
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #9d76ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+}
+.div {
+    align-self: stretch;
+    position: relative;
+}
+.frame-div {
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.skin1004-wrapper {
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #ff7676;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+}
+
