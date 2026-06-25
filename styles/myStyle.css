@@ -1,5 +1,4 @@
-﻿
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 body {
     direction: rtl;
@@ -7,7 +6,7 @@ body {
     background-image: url('../img/BG.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;     
+    background-attachment: fixed;
     background-position: center;
     font-family: 'Rubik', sans-serif;
     color: #4c370d;
@@ -17,7 +16,7 @@ p{
     line-height: 20px;
 }
 header {
-    background-color: #ffe6eb; 
+    background-color: #ffe6eb;
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 8px;
@@ -31,7 +30,7 @@ header {
 }
 
 /* שורת הלוגו - התיקון שמכריח אותו להיצמד לימין למרות שאר המרכוס */
- .logo-link {
+.logo-link {
     width: 100%;
     display: flex;
     justify-content: flex-start; /* מצמיד את תוכן השורה לימין */
@@ -43,8 +42,6 @@ header {
     height: auto;
     display: block;
 }
-
-
 
 /* תפריט הניווט - ממוקם מעל הכותרת וממורכז */
 header nav {
@@ -75,7 +72,6 @@ nav ul li .dropdown-menu {
 /* ברגע שעושים hover על ה-li של האבא -> תציג את ה-dropdown-menu שבתוכו */
 nav ul li.dropdown:hover .dropdown-menu {
     display: block;            /* מציג את התפריט החבוי */
-    ;
 }
 
 /* 4. עיצוב הלינקים הפנימיים בתוך התפריט הנפתח */
@@ -92,8 +88,6 @@ nav ul li .dropdown-menu li  {
     text-decoration: none;
     color: #4c370d;
 }
-
-
 
 /* שינוי צבע ברקע כשעוברים על האופציות בתוך התפריט הנפתח */
 nav ul li .dropdown-menu li:hover {
@@ -146,7 +140,7 @@ main, .breadcrumb{
 }
 
 .breadcrumb a:hover, .developedPages:hover{
-text-decoration: underline;
+    text-decoration: underline;
 }
 /* --- עיצוב ה-FOOTER כמלבן חלול בצבע של ה-header --- */
 footer {
@@ -159,8 +153,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     direction: ltr; /* הופך כיוון כדי שהלוגו ייצמד לימין הפיזי של הדף */
-    
-    
 }
 
 footer p {
@@ -169,7 +161,6 @@ footer p {
     color: #4c370d;                   /* צבע טקסט כהה וקריא */
     font-weight: 500;
 }
-
 
 .college-logo {
     width: 120px;
@@ -248,28 +239,29 @@ footer p {
     margin: 20px auto;         /* ממרכז את התמונה יפה תחת התוכן של עמוד הבית */
 }
 
-
 .acneSkinCare {
     width: 150px;
     height: 150px;
     object-fit: contain;
     display: inline-block;
-    
 }
+
 .purchase-buttons{
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-
-
-.purchase-buttons a, #formBtn{
+/* ======================================================= */
+/* --- סנכרון ועיצוב הכפתורים: עמודי תוכן + עמוד הבית --- */
+/* ======================================================= */
+/* חיברנו את המחלקה .card-link של עמוד הבית לעיצוב הקיים שלכן */
+.purchase-buttons a, #formBtn, .card-link {
     text-decoration: none;
     background-color: #ff6b8b;
-    color: #fcfcfc;
-    display: block;
-    width: 150px;
+    color: #fcfcfc !important; /* דואג שהטקסט תמיד יהיה בהיר על הורוד הכהה */
+    display: inline-block;     /* מתאים לכפתור עצמאי בעמוד הבית */
+    width: 180px;              /* הגדלתי טיפה מ-150 כדי שטקסט ארוך כמו "לקריאת הסיפור שלנו" לא יישבר */
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -277,29 +269,26 @@ footer p {
     text-align: center;
     font-weight: 500;
     border: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease; /* מעבר חלק במעבר עכבר */
 }
 
-.purchase-buttons a:hover,#formBtn:hover{
+/* אפקט ה-Hover המסונכרן לכל הכפתורים באתר */
+.purchase-buttons a:hover, #formBtn:hover, .card-link:hover {
     background-color: #ffafc0;
-    color: #4c370d;
-    display: block;
+    color: #4c370d !important; /* מחליף לטקסט חום-כהה יפה וקריא */
     font-weight: bold;
-    width: 150px;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 10px;
-    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .stage{
-display: block;
+    display: block;
     padding: 20px;
 }
 
 .narrowText{
     max-width: 1000px;
-line-height: 25px;
+    line-height: 25px;
 }
 
 .required{
@@ -313,8 +302,9 @@ input , textarea , select {
 
 .brand-description{
     max-width: 800px;
-text-align: center;
+    text-align: center;
 }
+
 /* --- מדור הטיפים המשודרג בעמוד הבית --- */
 .tips-section {
     margin: 50px auto;
@@ -372,32 +362,4 @@ text-align: center;
     font-size: 0.98rem;
     line-height: 1.6;
     color: #444;
-}
-
-/* הדגשות בתוך הטיפים */
-.tip-card p strong {
-    color: #ff6b8b;
-}
-/* --- עיצוב הקישורים ככפתורים בעמוד הבית --- */
-.card-link {
-    display: inline-block;
-    background-color: #ffe6eb;    /* רקע ורוד בהיר כמו ה-header */
-    color: #444444;               /* צבע הטקסט של הכפתור */
-    text-decoration: none;        /* מוריד את קו התחתון הסגול של הקישור */
-    padding: 10px 20px;           /* מרווח פנימי שיוצר את צורת הכפתור */
-    border: 1px solid #fca1b0;    /* מסגרת ורדרדה עדינה */
-    border-radius: 20px;          /* פינות מעוגלות ויפות */
-    font-weight: bold;
-    font-size: 0.95rem;
-    margin-top: 10px;             /* מרווח קטן מהטקסט שמעל הכפתור */
-    transition: all 0.2s ease;    /* אנימציה חלקה למעבר עכבר */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-}
-
-/* אפקט החלקת עכבר (Hover) על הכפתור */
-.card-link:hover {
-    background-color: #ff6b8b;    /* הופך לורוד כהה יותר במעבר עכבר */
-    color: #ffffff;               /* הטקסט הופך ללבן */
-    box-shadow: 0 4px 8px rgba(255, 107, 139, 0.2); /* צל קטן שנותן נפח */
-    transform: translateY(-1px);  /* הרמה קטנה של הכפתור שנותנת תחושה אינטראקטיבית */
 }
