@@ -32,7 +32,7 @@
     </div>
 
     <main class="diagnostic-main">
-        <p class="narrowText">ברוכה הבאה למערכת האבחון של K-GLOW. עני על השאלות הקצרות שלפנייך, והמערכת תתאים לך בזמן אמת את החומרים והמוצרים הנדרשים לעור קורן ובריא.</p>
+        <p class="narrowText">ברוכה הבאה למערכת האבחון של K-GLOW. עני על השאלות הקצרות שלפנייך, והמערכת תתאים לך בזמן אמת את החומרים והמוצרים הנדרשים לעור קורן, בריא ורענן.</p>
 
         <div class="diagnostic-wrapper">
 
@@ -45,11 +45,11 @@
                     </div>
 
                     <div class="form-group">
-                        <label>מהו סוג העור העיקרי שלך? <span class="required">*</span></label>
+                        <label>מהו סוג העור שלך? <span class="required">*</span></label>
                         <div class="radio-options">
-                            <label><input type="radio" name="skinType" value="acne" required> עור אקנתי / פצעונים תקופתיים</label>
-                            <label><input type="radio" name="skinType" value="dry"> עור יבש / מתקלף ומתוח</label>
-                            <label><input type="radio" name="skinType" value="oily"> עור שמן / מבריק עם נקבוביות פתוחות</label>
+                            <label><input type="radio" name="skinType" value="acne" required> עור אקנתי עם פצעונים תקופתיים</label>
+                            <label><input type="radio" name="skinType" value="dry"> עור יבש ומתקלף </label>
+                            <label><input type="radio" name="skinType" value="oily"> עור שמן, מבריק עם נקבוביות פתוחות</label>
                         </div>
                     </div>
 
@@ -70,22 +70,22 @@
                     <h3>ההתאמה הויזואלית שלך:</h3>
 
                     <div class="skin-type-images">
-                        <img src="img/toner.png" alt="טונר אנואה לעור אקנתי ושמן" id="imgAcneOily" class="acneSkinCare" style="display:none;">
-                        <img src="img/snail.png" alt="סנייל מיוסין לעור יבש ופגוע" id="imgDry" class="acneSkinCare" style="display:none;">
+                        <img src="img/toner.png" alt="טונר לעור אקנתי ושמן" id="imgAcneOily" class="acneSkinCare" style="display:none;">
+                        <img src="img/snail.png" alt="ריר חלזונות לעור יבש ופגוע" id="imgDry" class="acneSkinCare" style="display:none;">
                         <p id="placeholderText">ביחרי סוג עור כדי לראות את בסיס השגרה המומלץ...</p>
                     </div>
 
                     <div class="treatment-boosters">
-                        <div id="boosterCentella" class="booster-item opacity-half">
+                        <div id="boosterCentella" class="booster-item">
                             <span> רכיב הרגעה: Centella Asiatica</span>
                         </div>
-                        <div id="boosterVitaminC" class="booster-item opacity-half">
+                        <div id="boosterVitaminC" class="booster-item">
                             <span> רכיב הבהרה: Vitamin C / Niacinamide</span>
                         </div>
                     </div>
+
+                    <div id="diagnosticResultSummary" class="summary-output" style="display: none;"></div>
                 </div>
             </section>
         </div>
-
-        <div id="diagnosticResultSummary" class="summary-output" style="display: none;"></div>
     </main>

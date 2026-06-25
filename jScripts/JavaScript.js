@@ -58,7 +58,7 @@
         // 1. העלמת טקסט ברירת המחדל
         if (placeholderText) placeholderText.style.display = "none";
 
-        // 2. החלפת תמונות
+        // 2. החלפת תמונות לפי סוג עור
         imgAcneOily.style.display = "none";
         imgDry.style.display = "none";
 
@@ -68,17 +68,17 @@
             imgDry.style.display = "block";
         }
 
-        // 3. שינוי שקיפויות הבוסטרים בהתאם לצ'קבוקסים
+        // 3. הצגת רכיבי הבוסטרים המשניים רק אם סומנו בצ'קבוקס
         if (checkRedness.checked) {
-            boosterCentella.classList.add("opacity-full");
+            boosterCentella.style.display = "block";
         } else {
-            boosterCentella.classList.remove("opacity-full");
+            boosterCentella.style.display = "none";
         }
 
         if (checkPigmentation.checked) {
-            boosterVitaminC.classList.add("opacity-full");
+            boosterVitaminC.style.display = "block";
         } else {
-            boosterVitaminC.classList.remove("opacity-full");
+            boosterVitaminC.style.display = "none";
         }
 
         // 4. יצירת הודעת הסיכום הטקסטואלית
@@ -103,6 +103,7 @@
             <p><strong>טיפ מצוות K-GLOW:</strong> הקפידי על התמדה וסבלנות, התוצאות המדהימות בדרך!</p>
         `;
 
+        // הצגת אזור הסיכום מתחת לתמונות ולבוסטרים
         summaryOutput.style.display = "block";
         summaryOutput.scrollIntoView({ behavior: 'smooth' });
     });

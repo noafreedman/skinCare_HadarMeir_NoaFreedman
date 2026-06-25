@@ -364,9 +364,6 @@ input , textarea , select {
     color: #444;
 }
 <<<<<<< Updated upstream
-/* ======================================================= */
-/* --- עיצוב עמוד האבחון האינטראקטיבי - תיקון פריסה וריווח --- */
-/* ======================================================= */
             /* ======================================================= */
             /* --- עיצוב עמוד האבחון האינטראקטיבי - גרסה סופית ויציבה --- */
             /* ======================================================= */
@@ -433,7 +430,7 @@ input , textarea , select {
 /* הבלוקים שמכריחים את האפשרויות לרדת שורה בטור אנכי */
 .radio-options, .checkbox-options {
     display: flex;
-    flex-direction: column !important; /* קריטי! מבטל כל יישור שורתי */
+    flex-direction: column !important;
     gap: 15px;
     width: 100%;
 }
@@ -441,7 +438,7 @@ input , textarea , select {
 /* שורת אפשרות בודדת */
 .radio-options label, .checkbox-options label {
     display: flex !important;
-    flex-direction: row !important; /* עיגול מימין, טקסט משמאל */
+    flex-direction: row !important;
     align-items: center;
     margin: 0;
     font-weight: normal;
@@ -456,9 +453,9 @@ input , textarea , select {
 .checkbox-options input[type="checkbox"] {
     width: auto !important;
     height: auto !important;
-    margin-left: 12px !important; /* רווח בין העיגול לטקסט */
+    margin-left: 12px !important;
     margin-right: 0 !important;
-    transform: scale(1.2); /* הגדלה עדינה של הרכיב שיהיה יפה */
+    transform: scale(1.2);
     cursor: pointer;
 }
 
@@ -491,52 +488,36 @@ input , textarea , select {
     gap: 15px;
 }
 
+/* שינוי: הבוסטרים מוסתרים לחלוטין כברירת מחדל עד הלחיצה */
 .booster-item {
-    border: 1px solid #ffafc0;
+    display: none;
+    border: 1px solid #ff6b8b;
     padding: 14px;
     margin: 0;
     border-radius: 8px;
-    background-color: #fcfcfc;
-    text-align: right;
-}
-
-/* שקיפויות לפי דרישות התרגיל */
-.opacity-half {
-    opacity: 0.35;
-    transition: all 0.3s ease;
-}
-
-.opacity-full {
-    opacity: 1 !important;
+    background-color: #fff0f3;
     font-weight: bold;
-    border-color: #ff6b8b !important;
-    background-color: #fff0f3 !important;
+    text-align: right;
     box-shadow: 0 2px 8px rgba(255, 107, 139, 0.1);
 }
 
-/* כפתור הפעלה */
-#formBtn {
-    margin-top: 10px;
-    cursor: pointer;
-}
-
+/* החרגת כפתור הטופס למצב חסום - שומר על עיצוב האתר אך מנטרל אותו חזותית */
 #formBtn:disabled {
     background-color: #cccccc !important;
     color: #666666 !important;
     cursor: not-allowed;
     box-shadow: none;
-    opacity: 0.5 !important; /* שקיפות 0.5 לכפתור לא פעיל לפי הדרישה */
+    opacity: 0.5 !important;
 }
 
-/* פלט הודעת סיכום */
+/* פלט הודעת סיכום מעודכן - מותאם לישיבה בתוך הטור השמאלי */
 .summary-output {
-    margin: 40px auto 20px auto;
-    padding: 30px;
-    background-color: #fff0f3;
-    border-right: 6px solid #ff6b8b;
-    border-radius: 12px;
-    font-size: 1.15rem;
-    line-height: 1.7;
-    max-width: 1000px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 230, 235, 0.3);
+    border-right: 4px solid #ff6b8b;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    line-height: 1.6;
     text-align: right;
 }
