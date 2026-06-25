@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>K-GLOW | אבחון עור אינטראקטיבי</title>
+    <meta name="description" content="מערכת אבחון עור חכמה מבית K-GLOW - גלי את שגרת הטיפוח הקוריאנית המדויקת עבורך" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <script src="jScripts/JavaScript.js" type="text/javascript" defer></script>
+</head>
+<body>
+<div id="container">
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="img/k-glow-logo.png" alt="K-glow Logo" class="ourLogo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">דף הבית</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="diagnostic.html" class="active">אבחון עור</a></li>
+                <li><a href="contactUs.html">צור קשר</a></li>
+                <li><a href="siteMap.html">מפת האתר</a></li>
+            </ul>
+        </nav>
+        <h1>אבחון עור אינטראקטיבי</h1>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">דף הבית</a> <span>אבחון עור</span>
+    </div>
+
+    <main class="diagnostic-main">
+        <p class="narrowText">ברוכה הבאה למערכת האבחון של K-GLOW. עני על השאלות הקצרות שלפנייך, והמערכת תתאים לך בזמן אמת את החומרים והמוצרים הנדרשים לעור קורן, בריא ורענן.</p>
+
+        <div class="diagnostic-wrapper">
+
+            <section class="form-zone">
+                <form id="skinForm" onsubmit="return false;">
+
+                    <div class="form-group">
+                        <label for="userName">מה השם שלך? <span class="required">*</span></label>
+                        <input type="text" id="userName" id="userName" placeholder="הקלידי שם מלא..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>מהו סוג העור העיקרי שלך? <span class="required">*</span></label>
+                        <div class="radio-options">
+                            <label><input type="radio" name="skinType" value="acne" required> עור אקנתי / פצעונים תקופתיים</label>
+                            <label><input type="radio" name="skinType" value="dry"> עור יבש / מתקלף ומתוח</label>
+                            <label><input type="radio" name="skinType" value="oily"> עור שמן / מבריק עם נקבוביות פתוחות</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>סמני בעיות משניות שתרצי לטפל בהן (ניתן לבחור יותר מאחת):</label>
+                        <div class="checkbox-options">
+                            <label><input type="checkbox" id="checkRedness" value="redness"> אדמומיות ועור רגיש או מגורה</label>
+                            <label><input type="checkbox" id="checkPigmentation" value="pigmentation"> פיגמנטציה, כתמי שמש או סימני פצעים</label>
+                        </div>
+                    </div>
+
+                    <button type="button" id="formBtn" disabled>הציגי אבחון סופי</button>
+                </form>
+            </section>
+
+            <section class="visual-zone">
+                <div class="result-box">
+                    <h3>ההתאמה הויזואלית שלך:</h3>
+
+                    <div class="skin-type-images">
+                        <img src="img/toner.png" alt="טונר אנואה לעור אקנתי ושמן" id="imgAcneOily" class="acneSkinCare" style="display:none;">
+                        <img src="img/snail.png" alt="סנייל מיוסין לעור יבש ופגוע" id="imgDry" class="acneSkinCare" style="display:none;">
+                        <p id="placeholderText">ביחרי סוג עור כדי לראות את בסיס השגרה המומלץ...</p>
+                    </div>
+
+                    <div class="treatment-boosters">
+                        <div id="boosterCentella" class="booster-item opacity-half">
+                            <span> רכיב הרגעה: Centella Asiatica</span>
+                        </div>
+                        <div id="boosterVitaminC" class="booster-item opacity-half">
+                            <span> רכיב הבהרה: Vitamin C / Niacinamide</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="diagnosticResultSummary" class="summary-output" style="display: none;"></div>
+    </main>
+
+    <footer>
+        <p>2026 K-GLOW - כל הזכויות שמורות לנעה והדר | הפקולטה לטכנולוגיות למידה, HIT</p>
+        <img src="img/logo-hit.png" alt="לוגו HIT - המכון הטכנולוגי חולון" class="college-logo">
+    </footer>
+
+</div>
+</body>
+</html>
