@@ -64,7 +64,7 @@ nav ul li .dropdown-menu {
     background-color: #fcfcfc;   /* צבע רקע לתפריט הנפתח */
     list-style-type: none;     /* מעלים את הנקודות של הרשימה */
     padding: 10px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* צל קטן שייראה צף */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* צל קטן שייראה צף */
     border-radius: 8px;
 }
 
@@ -217,7 +217,7 @@ footer p {
     height: 280px !important;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 10px;
 }
 
@@ -256,7 +256,11 @@ footer p {
 /* --- סנכרון ועיצוב הכפתורים: עמודי תוכן + עמוד הבית --- */
 /* ======================================================= */
 /* חיברנו את המחלקה .card-link של עמוד הבית לעיצוב הקיים שלכן */
-.purchase-buttons a, #formBtn, .card-link {
+
+
+
+
+.purchase-buttons a, #formBtn, .card-link, .mapColumn > :first-child, .pageBtn:hover {
     text-decoration: none;
     background-color: #ff6b8b;
     color: #fcfcfc !important; /* דואג שהטקסט תמיד יהיה בהיר על הורוד הכהה */
@@ -264,21 +268,36 @@ footer p {
     width: 180px;              /* הגדלתי טיפה מ-150 כדי שטקסט ארוך כמו "לקריאת הסיפור שלנו" לא יישבר */
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 10px;
     text-align: center;
     font-weight: 500;
     border: none;
     box-sizing: border-box;
     transition: all 0.2s ease; /* מעבר חלק במעבר עכבר */
+    margin: 0;
+
+}
+
+
+
+/* ברירת המחדל לכל הכפתורים (העיצוב הוורוד/קורל) */
+.pageBtn {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+    text-align: center;
+    margin: 0;
 }
 
 /* אפקט ה-Hover המסונכרן לכל הכפתורים באתר */
-.purchase-buttons a:hover, #formBtn:hover, .card-link:hover {
+.purchase-buttons a:hover, #formBtn:hover, .card-link:hover, .mapColumn > :first-child:hover, .pageBtn {
     background-color: #ffafc0;
     color: #4c370d !important; /* מחליף לטקסט חום-כהה יפה וקריא */
     font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .stage{
@@ -335,7 +354,7 @@ input , textarea , select {
     border-right: 5px solid #ff6b8b; /* פס הדגשה ורוד בצד ימין */
     border-radius: 8px;
     padding: 22px;
-    box-shadow: 0 4px 12px rgba(255, 107, 139, 0.06);
+    box-shadow: 0 2px 5px rgba(255, 107, 139, 0.06);
 }
 
 /* תגית המספר של הטיפ */
@@ -362,15 +381,13 @@ input , textarea , select {
     font-size: 0.98rem;
     line-height: 1.6;
     color: #444;
+
+
 }
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 
 /* ======================================================= */
 /* --- עיצוב עמוד האבחון האינטראקטיבי - תיקון פריסה וריווח --- */
 /* ======================================================= */
->>>>>>> 0836e170e4d5dd05f2b67bc7c9d562a5d75345d9
             /* ======================================================= */
             /* --- עיצוב עמוד האבחון האינטראקטיבי - גרסה סופית ויציבה --- */
             /* ======================================================= */
@@ -401,7 +418,7 @@ input , textarea , select {
     padding: 35px;
     border-radius: 12px;
     border: 1px solid #ffafc0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
 }
 
 /* קופסת התוצאות משמאל */
@@ -505,7 +522,7 @@ input , textarea , select {
     background-color: #fff0f3;
     font-weight: bold;
     text-align: right;
-    box-shadow: 0 2px 8px rgba(255, 107, 139, 0.1);
+    box-shadow: 0 2px 5px rgba(255, 107, 139, 0.1);
 }
 
 /* החרגת כפתור הטופס למצב חסום - שומר על עיצוב האתר אך מנטרל אותו חזותית */
@@ -529,48 +546,32 @@ input , textarea , select {
     text-align: right;
 }
 
-.frame-parent {
-    width: 100%;
-    position: relative;
-    background-color: #fff;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+/* הקונטיינר החיצוני ביותר */
+.fullMap {
     padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
 }
-.frame-group {
+
+/* אלמנט השורה שמחזיק את הטורים */
+.mapFrame {
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
+    justify-content: center;
+    flex-direction: row; /* מסדר את הטורים בשורה אופקית */
+    flex-wrap: nowrap;   /* מונע מהם לרדת שורה */
+    gap: 20px;           /* רווח בין טור לטור */
 }
-.frame-wrapper {
-    width: 275px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.pageBtn, .categoryFrame {
-    align-self: stretch;
-    border-radius: 8px;
-    background-color: #9d76ff;
+
+/* הטורים עצמם */
+.mapColumn {
+    flex-shrink: 0;      /* מונע מהטורים להתכווץ מתחת ל-305 פיקסלים */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 10px 0px;
+    gap: 10px;           /* רווח בין הכפתורים בתוך הטור */
 }
-.pageName {
-    align-self: stretch;
-    position: relative;
-}
-.frame-div {
-    width: 275px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
+
+
+
+
+
+
 
 
