@@ -16,48 +16,61 @@
 
 <body>
 <div id="container">
-
-    <!-- HEADER מאוחד ותקני לכל העמוד -->
     <header>
-        <!-- הלוגו של האתר (יופיע מימין) -->
         <a href="index.html" class="ourLogo">
             <img src="img/k-glow-logo.png" alt="K-glow Logo" class="ourLogo">
         </a>
-
-       
         <!-- תפריט הניווט הראשי של האתר -->
         <nav>
             <ul>
                 <li><a href="index.html">דף הבית</a></li>
                 <li><a href="about.html">אודות</a></li>
-                <li><a href="diagnostic.html">אבחון עור</a></li>
-                <li><a href="contactUs.html">צור קשר</a></li>
+                <li class="dropdown">
+                    <a href="#">שגרות טיפוח</a>                <!-- הרשימה הנפתחת חבויה בתוך ה-li -->
+                    <ul class="dropdown-menu">
+                        <li class="disabled-link">עור אקנתי</li>
+                        <li><a href="#" class="disabled-link">עור יבש</a></li>
+                        <li><a href="#" class="disabled-link">עור מעורב</a></li>
+                        <li><a href="#" class="disabled-link">עור בוגר</a></li>
+                        <li><a href="#" class="disabled-link">פיגמנטציה</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">המומלצים שלנו</a>                <!-- הרשימה הנפתחת חבויה בתוך ה-li -->
+                    <ul class="dropdown-menu">
+                        <li><a href="skin1004.html">SKIN1004</a></li>
+                        <li class="disabled-link">SOME BY MI</li>
+                        <li class="disabled-link">Beauty of Joseon</li>
+                        <li class="disabled-link">Anua</li>
+                        <li class="disabled-link">iUNIK</li>
+                        <li class="disabled-link">COSRX</li>
+                        <li class="disabled-link">Cos de Baha</li>
+                    </ul>
+                </li>
+                <li><a href="contactUs.html">צרי קשר</a></li>
                 <li><a href="siteMap.html">מפת האתר</a></li>
             </ul>
         </nav>
 
-        <!-- כותרת העמוד הראשית -->
         <h1>שגרת טיפוח מנצחת לעור אקנתי</h1>
     </header>
 
-    <!-- פירורי לחם (Breadcrumbs) -->
     <div class="breadcrumb">
-        <a href="index.html">דף הבית</a> <span>&gt;</span> <span>התאמה על פי עור </span><span>&gt;</span> <span>שגרת טיפוח לאקנה</span>
+        <a href="index.html">דף הבית</a> <span>&gt;</span> <span>שגרות טיפוח </span><span>&gt;</span> <span class="currentPage">עור אקנתי</span>
     </div>
 
     <!-- התוכן המרכזי של העמוד -->
     <main>
         <!-- פסקת המבוא וההסבר (הוצאה מתוך ה-header הישן למקום הנכון) -->
-        <section class="intro">
-            <p>
+        <section >
+            <p class="narrowText">
                 אם הגעת לעמוד הזה, כנראה שגם את עייפת מהבטחות קסם על "מוצרים שיעלימו לך את האקנה ביומיים" או משגרות מטורפות של 12 שלבים שעולות כמו משכנתא. אנחנו יודעות בדיוק איך זה מרגיש לעמוד מול המראה, מתוסכלת, ולנסות להבין איזה רכיב ירגיע את העור ואיזה רק יחמיר את המצב.
-                <br/><br/>
-                <h2>הסוד שלנו? שילוב חכם ומנצח:</h2>
                 <br/>
-                חומצות פעילות וממוקדות (חומצה אזלאית וטרנקסמית) שמטפלות ישירות בדלקת, בחיידקי האקנה ובכתמים האדומים שהם משאירים מאחור.
+                <h2>הסוד שלנו? שילוב חכם ומנצח:</h2>
+            <p class="narrowText">                חומצות פעילות וממוקדות (חומצה אזלאית וטרנקסמית) שמטפלות ישירות בדלקת, בחיידקי האקנה ובכתמים האדומים שהם משאירים מאחור.
                 <br/>
                 רכיבי שיקום והרגעה קוריאניים (K-Beauty) כמו ריר חלזונות, עץ התה וסרמידים, שדואגים שהעור יישאר לח, רגוע ומאוזן – בלי להתייבש או להתקלף.
-                <br/><br/>
+                <br/>
                 גללי למטה כדי לראות את השלבים המדויקים, המוצרים המומלצים (עם קישורים ישירים לאיפה שכיף ומשתלם לקנות) וההבדל המרכזי בין מה שהעור שלך צריך בבוקר לבין מה שהוא חייב לקבל בלילה.
             </p>
         </section>
@@ -67,81 +80,123 @@
             <h2>שגרת בוקר: הגנה, הרגעה וטיפול בכתמים️</h2>
             <div class="routineStages">
 
-                <article class="stage">
-                    <h3>1. ניקוי במים פושרים</h3>
-                    <p>שטיפת הפנים במים פושרים בלבד כדי לא לייבש את העור ולשמור על הלחות הטבעית שנוצרה במהלך הלילה.</p>
-                </article>
+ 
+
 
                 <article class="stage">
-                    <h3>2. חומצה אזלאית 10% – Cos De Baha</h3>
-                    <img src="img/az.png" alt="Cos De Baha Azelaic Acid 10%" class="acneSkinCare">
-                    <p>רכיב מפתח אנטי-דלקתי ואנטי-בקטריאלי המטפל בהתפרצויות אקנה, מפחית אדמומיות ומסייע במניעת סתימת נקבוביות.</p>
-                    <div class="purchase-buttons">
-                        <a href="https://www.yesstyle.com/en/cos-de-baha-az-azelaic-acid-10-serum-30ml/info.html/pid.1103824132" target="_blank">
-                            <span class="btn">YesStyle</span>
-                        </a>
+                    <div class="sideBySide">
+                        <div >
+                            <img src="img/water.png" alt="water faucet" class="acneSkinCare">
+                        </div>
+                        <div>
+                            <h3>1. ניקוי במים פושרים</h3>
+                            <p>שטיפת הפנים במים פושרים בלבד כדי לא לייבש את העור ולשמור על הלחות הטבעית שנוצרה במהלך הלילה.</p>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="stage">
+                    <div class="sideBySide">
+                        <div >
+                            <img src="img/az.png" alt="Cos De Baha Azelaic Acid 10%" class="acneSkinCare">
+                        </div>
+                        <div>
+                            <h3>2. חומצה אזלאית 10% – Cos De Baha</h3>
+                            <p>רכיב מפתח אנטי-דלקתי ואנטי-בקטריאלי המטפל בהתפרצויות אקנה, מפחית אדמומיות ומסייע במניעת סתימת נקבוביות.</p>
+                            <div class="purchase-buttons">
+                            <a href="https://www.yesstyle.com/en/cos-de-baha-az-azelaic-acid-10-serum-30ml/info.html/pid.1103824132" target="_blank">
+                                <span class="btn">YesStyle</span>
+                            </a>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
                 <article class="stage">
-                    <h3>3. חומצה טרנקסמית – Cos De Baha</h3>
-                    <img src="img/tnx.png" alt="Cos De Baha Tranexamic Acid" class="acneSkinCare">
-                    <p>סרום עוצמתי לטיפול בכתמי פוסט-אקנה (PIE/PIH). עוזר לאזן את גוון העור ומבהיר סימנים אדומים וכהים שנשארו מפצעונים בעבר.</p>
-                    <div class="purchase-buttons">
-                        <a href="https://www.yesstyle.com/en/cos-de-baha-t15-serum-30ml-30ml/info.html/pid.1133162015" target="_blank">
-                            <span class="btn">YesStyle</span>
-                        </a>
+                    <div class="sideBySide">
+                        <div >
+                            <img src="img/tnx.png" alt="Cos De Baha Tranexamic Acid" class="acneSkinCare">
+                        </div>
+                        <div>
+                            <h3>3. חומצה טרנקסמית – Cos De Baha</h3>
+                            <p>סרום עוצמתי לטיפול בכתמי פוסט-אקנה (PIE/PIH). עוזר לאזן את גוון העור ומבהיר סימנים אדומים וכהים שנשארו מפצעונים בעבר.</p>
+                            <div class="purchase-buttons">
+                                <a href="https://www.yesstyle.com/en/cos-de-baha-t15-serum-30ml-30ml/info.html/pid.1133162015" target="_blank">
+                                    <span class="btn">YesStyle</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
                 <article class="stage">
-                    <h3>4. סרום עץ התה – iUNIK</h3>
-                    <img src="img/iunik.png" alt="iUNIK Tea Tree Relief Serum" class="acneSkinCare">
-                    <p>סרום המבוסס על מי עץ התה וסנטלה. מעניק הרגעה מיידית לעור מגורה, ומספק הגנה אנטי-ספטית עדינה מפני פצעונים חדשים.</p>
-                    <div class="purchase-buttons">
-                        <a href="https://www.yesstyle.com/en/iunik-tea-tree-relief-serum-50ml-50ml/info.html/pid.1064305739" target="_blank">
-                            <span class="btn">YesStyle</span>
-                        </a>
-                        <a href="https://il.iherb.com/pr/iunik-tea-tree-relief-serum-all-skin-type-1-69-fl-oz-50-ml/160721" target="_blank">
-                            <span class="btn">iHerb</span>
-                        </a>
-                        <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA240523480" target="_blank">
-                            <span class="btn">Olive Young</span>
+                    <div class="sideBySide">
+                        <div >
+                            <img src="img/iunik.png" alt="iUNIK Tea Tree Relief Serum" class="acneSkinCare">
+                        </div>
+                        <div>
+                            <h3>4. סרום עץ התה – iUNIK</h3>
+                            <p>סרום המבוסס על מי עץ התה וסנטלה. מעניק הרגעה מיידית לעור מגורה, ומספק הגנה אנטי-ספטית עדינה מפני פצעונים חדשים.</p>
+                            <div class="purchase-buttons">
+                                <a href="https://www.yesstyle.com/en/iunik-tea-tree-relief-serum-50ml-50ml/info.html/pid.1064305739" target="_blank">
+                                    <span class="btn">YesStyle</span>
+                                </a>
+                                <a href="https://il.iherb.com/pr/iunik-tea-tree-relief-serum-all-skin-type-1-69-fl-oz-50-ml/160721" target="_blank">
+                                    <span class="btn">iHerb</span>
+                                </a>
+                                <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA240523480" target="_blank">
+                                    <span class="btn">Olive Young</span>
 
-                        </a>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
                 <article class="stage">
-                    <h3>5. ריר חלזונות (Advanced Snail 96) – COSRX</h3>
-                    <img src="img/snail.png" alt="COSRX Advanced Snail 96 Mucin Power Essence" class="acneSkinCare">
-                    <p>הקלאסיקה הקוריאנית! תמצית המעניקה לחות עמוקה, מזרזת ריפוי של פצעים אקנתיים פעילים ומשפרת את מרקם העור.</p>
-                    <div class="purchase-buttons">
-                        <a href="https://www.yesstyle.com/en/cosrx-advanced-snail-96-mucin-power-essence-100ml/info.html/pid.1052684695" target="_blank">
-                            <span class="btn">YesStyle</span>
-                        </a>
-                        <a href="https://il.iherb.com/pr/cosrx-advanced-snail-96-mucin-power-essence-3-38-fl-oz-100-ml/77208" target="_blank">
-                            <span class="btn">iHerb</span>
-                        </a>
-                        <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA210000530" target="_blank">
-                            <span class="btn">Olive Young</span>
-                        </a>
+                    <div class="sideBySide">
+                        <div >
+                            <img src="img/snail.png" alt="COSRX Advanced Snail 96 Mucin Power Essence" class="acneSkinCare">
+                        </div>
+                        <div>
+                            <h3>5. ריר חלזונות (Advanced Snail 96) – COSRX</h3>
+                            <p>הקלאסיקה הקוריאנית! תמצית המעניקה לחות עמוקה, מזרזת ריפוי של פצעים אקנתיים פעילים ומשפרת את מרקם העור.</p>
+                            <div class="purchase-buttons">
+                                <a href="https://www.yesstyle.com/en/cosrx-advanced-snail-96-mucin-power-essence-100ml/info.html/pid.1052684695" target="_blank">
+                                    <span class="btn">YesStyle</span>
+                                </a>
+                                <a href="https://il.iherb.com/pr/cosrx-advanced-snail-96-mucin-power-essence-3-38-fl-oz-100-ml/77208" target="_blank">
+                                    <span class="btn">iHerb</span>
+                                </a>
+                                <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA210000530" target="_blank">
+                                    <span class="btn">Olive Young</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
                 <article class="stage">
-                    <h3>6. קרם הגנה (הכתום) Daily Go-To – Purito</h3>
-                    <img src="img/purito.png" alt="Purito Daily Go-To Sunscreen" class="acneSkinCare">
-                    <p>שלב חובה! מגן על העור מפני נזקי השמש ומבוסס על מסננים היברידיים שאינם מכבידים על עור שמן או אקנתי.</p>
-                    <div class="purchase-buttons">
-                        <a href="https://www.yesstyle.com/en/purito-seoul-daily-soft-touch-sunscreen-60ml/info.html/pid.1128316294" target="_blank">
-                            <span class="btn">iHerb</span>
-                        </a>
-                        <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA240624170" target="_blank">
-                            <span class="btn">Olive Young</span>
-                        </a>
+                    <div class="sideBySide">
+                        <div >
+                            <img src="img/purito.png" alt="Purito Daily Go-To Sunscreen" class="acneSkinCare">
+                        </div>
+                        <div>
+                            <h3>6. קרם הגנה (הכתום) Daily Go-To – Purito</h3>
+                            <p>שלב חובה! מגן על העור מפני נזקי השמש ומבוסס על מסננים היברידיים שאינם מכבידים על עור שמן או אקנתי.</p>
+                            <div class="purchase-buttons">
+                                <a href="https://www.yesstyle.com/en/purito-seoul-daily-soft-touch-sunscreen-60ml/info.html/pid.1128316294" target="_blank">
+                                    <span class="btn">iHerb</span>
+                                </a>
+                                <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA240624170" target="_blank">
+                                    <span class="btn">Olive Young</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </article>
+
+               
             </div>
         </section>
 
@@ -151,93 +206,134 @@
                 <h2>שגרת ערב: ניקוי כפול, טיפול ושיקום עמוק</h2>
                 <div class="products-container">
 
+
                     <article class="stage">
-                        <h3>1. ניקוי כפול: שמן ניקוי – SKIN1004</h3>
-                        <img src="img/cleanse2.png" alt="SKIN1004 Madagascar Centella Light Cleansing Oil" class="acneSkinCare">
-                        <p>שלב ראשון בניקוי הערב: שמן קליל המבוסס על סנטלה, הממיס ביעילות את שאריות קרם ההגנה של פיוריטו, הסבום העודף והלכלוך שהצטבר.</p>
-                        <div class="purchase-buttons">
-                            <a href="https://www.yesstyle.com/en/skin1004-madagascar-centella-light-cleansing-oil-200ml/info.html/pid.1077182361" target="_blank">
-                                <span class="btn">YesStyle</span>
-                            </a>
-                            <a href="https://il.iherb.com/pr/skin1004-madagascar-centella-light-cleansing-oil-6-76-fl-oz-200-ml/108337" target="_blank">
-                                <span class="btn">iHerb</span>
-                            </a>
-                            <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA220113369" target="_blank">
-                                <span class="btn">Olive Young</span>
-                            </a>
+                        <div class="sideBySide">
+                            <div >
+                                <img src="img/cleanse2.png" alt="SKIN1004 Madagascar Centella Light Cleansing Oil" class="acneSkinCare">
+                            </div>
+                            <div>
+                                <h3>1. ניקוי כפול: שמן ניקוי – SKIN1004</h3>
+                                <p>שלב ראשון בניקוי הערב: שמן קליל המבוסס על סנטלה, הממיס ביעילות את שאריות קרם ההגנה, הסבום העודף והלכלוך שהצטבר.</p>
+                                <div class="purchase-buttons">
+                                    <a href="https://www.yesstyle.com/en/skin1004-madagascar-centella-light-cleansing-oil-200ml/info.html/pid.1077182361" target="_blank">
+                                        <span class="btn">YesStyle</span>
+                                    </a>
+                                    <a href="https://il.iherb.com/pr/skin1004-madagascar-centella-light-cleansing-oil-6-76-fl-oz-200-ml/108337" target="_blank">
+                                        <span class="btn">iHerb</span>
+                                    </a>
+                                    <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA220113369" target="_blank">
+                                        <span class="btn">Olive Young</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="stage">
+                        <div class="sideBySide">
+                            <div >
+                                <img src="img/cleanse1.png" alt="SKIN1004 Madagascar Centella Ampoule Foam" class="acneSkinCare">
+                            </div>
+                            <div>
+                                <h3>2. ניקוי כפול: סבון פנים – SKIN1004</h3>
+                                <p>שלב שני בניקוי הערב: קצף ניקוי עדין על בסיס מים שמנקה באופן סופי את נקבוביות העור ומכין אותו לקליטת החומצות.</p>
+                                <div class="purchase-buttons">
+                                    <a href="https://www.yesstyle.com/en/skin1004-madagascar-centella-ampoule-foam-125ml/info.html/pid.1077182367" target="_blank">
+                                        <span class="btn">YesStyle</span>
+                                    </a>
+                                    <a href="https://il.iherb.com/pr/skin1004-madagascar-centella-ampoule-foam-4-22-fl-oz-125-ml/108347" target="_blank">
+                                        <span class="btn">iHerb</span>
+                                    </a>
+                                    <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA220113371" target="_blank">
+                                        <span class="btn">Olive Young</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    
+
+                    <article class="stage">
+                        <div class="sideBySide">
+                            <div >
+                                <img src="img/az.png" alt="Cos De Baha Azelaic Acid 10%" class="acneSkinCare">
+                            </div>
+                            <div>
+                                <h3>2. חומצה אזלאית 10% – Cos De Baha</h3>
+                                <p>רכיב מפתח אנטי-דלקתי ואנטי-בקטריאלי המטפל בהתפרצויות אקנה, מפחית אדמומיות ומסייע במניעת סתימת נקבוביות.</p>
+                                <div class="purchase-buttons">
+                                    <a href="https://www.yesstyle.com/en/cos-de-baha-az-azelaic-acid-10-serum-30ml/info.html/pid.1103824132" target="_blank">
+                                        <span class="btn">YesStyle</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
                     <article class="stage">
-                        <h3>2. ניקוי כפול: סבון פנים – SKIN1004</h3>
-                        <img src="img/cleanse1.png" alt="SKIN1004 Madagascar Centella Ampoule Foam" class="acneSkinCare">
-                        <p>שלב שני בניקוי הערב: קצף ניקוי עדין על בסיס מים שמנקה באופן סופי את נקבוביות העור ומכין אותו לקליטת החומצות.</p>
-                        <div class="purchase-buttons">
-                            <a href="https://www.yesstyle.com/en/skin1004-madagascar-centella-ampoule-foam-125ml/info.html/pid.1077182367" target="_blank">
-                                <span class="btn">YesStyle</span>
-                            </a>
-                            <a href="https://il.iherb.com/pr/skin1004-madagascar-centella-ampoule-foam-4-22-fl-oz-125-ml/108347" target="_blank">
-                                <span class="btn">iHerb</span>
-                            </a>
-                            <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA220113371" target="_blank">
-                                <span class="btn">Olive Young</span>
-                            </a>
+                        <div class="sideBySide">
+                            <div >
+                                <img src="img/tnx.png" alt="Cos De Baha Tranexamic Acid" class="acneSkinCare">
+                            </div>
+                            <div>
+                                <h3>3. חומצה טרנקסמית – Cos De Baha</h3>
+                                <p>סרום עוצמתי לטיפול בכתמי פוסט-אקנה (PIE/PIH). עוזר לאזן את גוון העור ומבהיר סימנים אדומים וכהים שנשארו מפצעונים בעבר.</p>
+                                <div class="purchase-buttons">
+                                    <a href="https://www.yesstyle.com/en/cos-de-baha-t15-serum-30ml-30ml/info.html/pid.1133162015" target="_blank">
+                                        <span class="btn">YesStyle</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
                     <article class="stage">
-                        <h3>3. חומצה אזלאית 10% – Cos De Baha</h3>
-                        <img src="img/az.png" alt="Cos De Baha Azelaic Acid 10%" class="acneSkinCare">
-                        <p>מריחה נוספת בערב לטיפול ממוקד ואינטנסיבי בחיידקי האקנה וחידוש תאי העור בזמן השינה.</p>
-                        <div class="purchase-buttons">
-                            <a href="https://www.yesstyle.com/en/cos-de-baha-az-azelaic-acid-10-serum-30ml/info.html/pid.1103824132" target="_blank">
-                                <span class="btn">YesStyle</span>
-                            </a>
+                        <div class="sideBySide">
+                            <div >
+                                <img src="img/iunik.png" alt="iUNIK Tea Tree Relief Serum" class="acneSkinCare">
+                            </div>
+                            <div>
+                                <h3>4. סרום עץ התה – iUNIK</h3>
+                                <p>סרום המבוסס על מי עץ התה וסנטלה. מעניק הרגעה מיידית לעור מגורה, ומספק הגנה אנטי-ספטית עדינה מפני פצעונים חדשים.</p>
+                                <div class="purchase-buttons">
+                                    <a href="https://www.yesstyle.com/en/iunik-tea-tree-relief-serum-50ml-50ml/info.html/pid.1064305739" target="_blank">
+                                        <span class="btn">YesStyle</span>
+                                    </a>
+                                    <a href="https://il.iherb.com/pr/iunik-tea-tree-relief-serum-all-skin-type-1-69-fl-oz-50-ml/160721" target="_blank">
+                                        <span class="btn">iHerb</span>
+                                    </a>
+                                    <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA240523480" target="_blank">
+                                        <span class="btn">Olive Young</span>
+
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </article>
+
 
                     <article class="stage">
-                        <h3>4. חומצה טרנקסמית – Cos De Baha</h3>
-                        <img src="img/tnx.png" alt="Cos De Baha Tranexamic Acid" class="acneSkinCare">
-                        <p>עבודה מתמשכת על הבהרת הכתמים האדומים והאצת תהליך השיקום של גוון העור.</p>
-                        <div class="purchase-buttons">
-                            <a href="https://www.yesstyle.com/en/cos-de-baha-t15-serum-30ml-30ml/info.html/pid.1133162015" target="_blank">
-                                <span class="btn">YesStyle</span>
-                            </a>
+                        <div class="sideBySide">
+                            <div >
+                                <img src="img/illiyoon.png" alt="ILLIYOON Ceramide Ato Concentrate Cream" class="acneSkinCare">
+                            </div>
+                            <div>
+                                <h3>6. קרם לחות סרמידים Ato Concentrate – ILLIYOON</h3>
+                                <p>ההגנה המושלמת למחסום העור! קרם עשיר בסרמידים מרוכזים הנועל את כל הלחות, מונע יובש וגירויים מהחומצות, ומשקם את העור במהלך הלילה.</p>
+                                <div class="purchase-buttons">
+                                    <a href="https://www.yesstyle.com/en/illiyoon-ceramide-ato-concentrate-cream-mini-75ml/info.html/pid.1135298702" target="_blank">
+                                        <span class="btn">YesStyle</span>
+                                    </a>
+                                    <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA251034628" target="_blank">
+                                        <span class="btn">Olive Young</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </article>
-
-                    <article class="stage">
-                        <h3>5. סרום עץ התה – iUNIK</h3>
-                        <img src="img/iunik.png" alt="iUNIK Tea Tree Relief Serum" class="acneSkinCare">
-                        <p>שכבת הרגעה ואיזון שומניות לפני נעילת הלחות.</p>
-                        <div class="purchase-buttons">
-                            <a href="https://www.yesstyle.com/en/iunik-tea-tree-relief-serum-50ml-50ml/info.html/pid.1064305739" target="_blank">
-                                <span class="btn">YesStyle</span>
-                            </a>
-                            <a href="https://il.iherb.com/pr/iunik-tea-tree-relief-serum-all-skin-type-1-69-fl-oz-50-ml/160721" target="_blank">
-                                <span class="btn">iHerb</span>
-                            </a>
-                            <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA240523480" target="_blank">
-                                <span class="btn">Olive Young</span>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="stage">
-                        <h3>6. קרם לחות סרמידים Ato Concentrate – ILLIYOON</h3>
-                        <img src="img/illiyoon.png" alt="ILLIYOON Ceramide Ato Concentrate Cream" class="acneSkinCare">
-                        <p>ההגנה המושלמת למחסום העור! קרם עשיר בסרמידים מרוכזים הנועל את כל הלחות, מונע יובש וגירויים מהחומצות, ומשקם את העור במהלך הלילה.</p>
-                        <div class="purchase-buttons">
-                            <a href="https://www.yesstyle.com/en/illiyoon-ceramide-ato-concentrate-cream-mini-75ml/info.html/pid.1135298702" target="_blank">
-                                <span class="btn">YesStyle</span>
-                            </a>
-                            <a href="https://global.oliveyoung.com/product/detail?prdtNo=GA251034628" target="_blank">
-                                <span class="btn">Olive Young</span>
-                            </a>
-                        </div>
-                    </article>
-
                 </div>
             </div>
         </section>

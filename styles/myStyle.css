@@ -13,7 +13,9 @@ body {
     color: #4c370d;
     padding: 20px;
 }
-
+p{
+    line-height: 20px;
+}
 header {
     background-color: #ffe6eb; 
     padding: 20px;
@@ -81,7 +83,7 @@ nav ul li .dropdown-menu li  {
     display: block;
     padding: 8px 15px;
     white-space: nowrap;       /* מונע מהטקסט להישבר לשתי שורות */
-    color: #333;
+    color: #4c370d;
     text-decoration: none;
     font-weight: bold;
 }
@@ -91,9 +93,7 @@ nav ul li .dropdown-menu li  {
     color: #4c370d;
 }
 
-.currentPage{
-    font-weight: bold;
-}
+
 
 /* שינוי צבע ברקע כשעוברים על האופציות בתוך התפריט הנפתח */
 nav ul li .dropdown-menu li:hover {
@@ -114,8 +114,10 @@ header nav a, li.active {
     transition: color 0.2s;
 }
 
-header nav a:hover, header nav a.active, li.active, .currentPage {
+header nav a:hover, header nav a.active, li.active, .currentPage, .developedPages, .reasonsToLoveIt strong {
     color: #ff6b8b; /* הדגשת העמוד הנוכחי או במעבר עכבר */
+    text-decoration: none;
+    font-weight: bold;
 }
 /* וב-CSS מוסיפים חוק קטן (שימוש מעולה בסלקטור צאצא מתוך המצגת!): */
 nav ul li.dropdown > a {
@@ -129,33 +131,45 @@ nav ul li.dropdown > a {
 }
 
 /* כותרת ה-h1 - ממורכזת לחלוטין למרכז המלבן ומתחת לניווט */
-header h1 {
+h1 {
     margin: 0;
     font-size: 2.2rem;
     text-align: center;
+    text-shadow:2px 2px #ff6b8b;
 }
 main, .breadcrumb{
     margin: auto 50px;
+}
+
+.breadcrumb{
+    font-size: 0.75rem;
+}
+
+.breadcrumb a:hover, .developedPages:hover{
+text-decoration: underline;
 }
 /* --- עיצוב ה-FOOTER כמלבן חלול בצבע של ה-header --- */
 footer {
     margin-top: 50px;
     background-color: #fcfcfc;    /* ללא צבע רקע (שקוף/חלול) */
-    border: 2px solid #ffe6eb;        /* מסגרת בצבע הורוד של ה-header */
+    border: 2px solid #ffafc0;        /* מסגרת בצבע הורוד של ה-header */
     padding: 15px 30px;               /* יצירת מרווח פנימי למלבן */
     border-radius: 8px;               /* פינות מעוגלות התואמות להדר */
     display: flex;
     justify-content: space-between;
     align-items: center;
     direction: ltr; /* הופך כיוון כדי שהלוגו ייצמד לימין הפיזי של הדף */
+    
+    
 }
 
 footer p {
     direction: rtl;
     margin: 0;
-    color: #444444;                   /* צבע טקסט כהה וקריא */
+    color: #4c370d;                   /* צבע טקסט כהה וקריא */
     font-weight: 500;
 }
+
 
 .college-logo {
     width: 120px;
@@ -164,7 +178,7 @@ footer p {
 }
 
 /* --- סידור תוכן עמוד האודות --- */
-.about-wrapper {
+.fixedAbout {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
@@ -181,14 +195,19 @@ footer p {
 }
 
 /* אזור התמונות - אחת ליד השנייה */
-.about-images {
+.sideBySide {
     flex: 1;
     display: flex;
     gap: 20px;
     min-width: 300px;
+    justify-content: right;
+}
+
+.fixedAbout .sideBySide{
     justify-content: center;
 }
-.image-item {
+
+.figure {
     display: flex;
     flex-direction: column;   /* מסדר את התמונה והטקסט זה תחת זה */
     align-items: center;      /* ממרכז אותם אופקית בצורה מושלמת */
@@ -202,7 +221,7 @@ footer p {
     line-height: 1.5;
 }
 
-.aboutChoice {
+.figuresChoice {
     width: 200px !important;
     height: 280px !important;
     object-fit: cover;
@@ -229,9 +248,70 @@ footer p {
     margin: 20px auto;         /* ממרכז את התמונה יפה תחת התוכן של עמוד הבית */
 }
 
+
 .acneSkinCare {
-    width: 200px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     display: inline-block;
+    
+}
+.purchase-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+
+.purchase-buttons a, #formBtn{
+    text-decoration: none;
+    background-color: #ff6b8b;
+    color: #fcfcfc;
+    display: block;
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500;
+    border: none;
+}
+
+.purchase-buttons a:hover,#formBtn:hover{
+    background-color: #ffafc0;
+    color: #4c370d;
+    display: block;
+    font-weight: bold;
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.stage{
+display: block;
+    padding: 20px;
+}
+
+.narrowText{
+    max-width: 1000px;
+line-height: 25px;
+}
+
+.required{
+    color: red;
+    font-size: 0.75rem;
+}
+
+input , textarea , select {
+    width: 300px;
+}
+
+.brand-description{
+    max-width: 800px;
+text-align: center;
 }

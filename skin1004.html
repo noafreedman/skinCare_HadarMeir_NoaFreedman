@@ -27,8 +27,29 @@
             <ul>
                 <li><a href="index.html">דף הבית</a></li>
                 <li><a href="about.html">אודות</a></li>
-                <li><a href="diagnostic.html">אבחון עור</a></li>
-                <li><a href="contactUs.html">צור קשר</a></li>
+                <li class="dropdown">
+                    <a href="#">שגרות טיפוח</a>                <!-- הרשימה הנפתחת חבויה בתוך ה-li -->
+                    <ul class="dropdown-menu">
+                        <li><a href="acne.html">עור אקנתי</a></li>
+                        <li><a href="#" class="disabled-link">עור יבש</a></li>
+                        <li><a href="#" class="disabled-link">עור מעורב</a></li>
+                        <li><a href="#" class="disabled-link">עור בוגר</a></li>
+                        <li><a href="#" class="disabled-link">פיגמנטציה</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">המומלצים שלנו</a>                <!-- הרשימה הנפתחת חבויה בתוך ה-li -->
+                    <ul class="dropdown-menu">
+                        <li class="disabled-link">SKIN1004</li>
+                        <li class="disabled-link">SOME BY MI</li>
+                        <li class="disabled-link">Beauty of Joseon</li>
+                        <li class="disabled-link">Anua</li>
+                        <li class="disabled-link">iUNIK</li>
+                        <li class="disabled-link">COSRX</li>
+                        <li class="disabled-link">Cos de Baha</li>
+                    </ul>
+                </li>
+                <li><a href="contactUs.html">צרי קשר</a></li>
                 <li><a href="siteMap.html">מפת האתר</a></li>
             </ul>
         </nav>
@@ -38,39 +59,41 @@
             מותג טיפוח קוריאני, המבוסס על תמצית סנטלה אסיאטיקה (Centella Asiatica) איכותית המופקת ישירות מהטבע הבתולי של מדגסקר. המוצרים מיועדים להרגעת העור, שיקום מחסום העור והענקת לחות עמוקה.
         </p>
     </header>
-   
+
     <!-- תפריט פירורי לחם (Breadcrumb) לאחידות וניווט נגיש -->
     <div class="breadcrumb">
-        <a href="index.html">דף הבית</a> &gt; <span>המותגים האהובים עלינו</span> &gt; <span>SKIN1004</span>
+        <a href="index.html">דף הבית</a> &gt; <span>המותגים האהובים עלינו</span> &gt; <span class="currentPage">SKIN1004</span>
     </div>
 
 <main>
     <section class="reasonsToLoveIt">
         <h2>למה אנחנו כל כך אוהבות אותו?</h2>
-        <ul>
-            <li>
-                <strong>רכיבים נקיים וטבעיים:</strong> המותג משתמש בסנטלה שגדלה במדגסקר ונצרכת בתנאים קפדניים, ללא חומרים מגרים.
-            </li>
-            <li>
-                <strong>מרקמים קלילים כמו מים:</strong> המוצרים נספגים בשניות, לא מכבידים על העור ומושלמים למזג האוויר הישראלי.
-            </li>
-            <li>
-                <strong>גאונות בהרגעת העור:</strong> זה מותג ה-Go-To שלנו בכל פעם שהעור אדמומי, מגורה או חווה התפרצות.
-            </li>
-        </ul>
+            <p>
+                <strong>רכיבים נקיים וטבעיים</strong> - המותג משתמש בסנטלה שגדלה במדגסקר ונצרכת בתנאים קפדניים, ללא חומרים מגרים.
+            </p>
+            <p>
+                <strong>מרקמים קלילים כמו מים</strong> - המוצרים נספגים בשניות, לא מכבידים על העור ומושלמים למזג האוויר הישראלי.
+            </p>
+            <p>
+                <strong>גאונות בהרגעת העור</strong> - זה מותג ה-Go-To שלנו בכל פעם שהעור אדמומי, מגורה או חווה התפרצות.
+            </p>
     </section>
     <!-- 3. המוצרים הנבחרים של כל אחת (Personal Picks) -->
     <section class="ourPicks">
         <h2>הבחירות שלנו</h2>
             <!-- הבחירה של כותבת א' -->
-            <article class="pickedProduct">
-                <h3>הבחירה של נעה</h3>
+
+        <article class="stage">
+            <div class="sideBySide">
+                <div >
                     <img src="img/cleanse2.png" alt="Madagascar Centella Light Cleansing Oil" class="acneSkinCare">
+                </div>
+                <div>
+                    <h3>הבחירה של נעה</h3>
                     <h4>שמן ניקוי - Madagascar Centella Light Cleansing Oil</h4>
-                    <p>הסוד שלי לניקוי יסודי בלי לפגוע בעור. שמן ניקוי קליל במיוחד שממיס בקלות את כל האיפור העמיד וקרם ההגנה של היום, נשטף בשניות עם מים ולא משאיר שום שכבה שומנית או נקבוביות סתומות!</p>
-                    
+
+                    <p class="narrowText">הסוד שלי לניקוי יסודי בלי לפגוע בעור. שמן ניקוי קליל במיוחד שממיס בקלות את כל האיפור העמיד וקרם ההגנה של היום, נשטף בשניות עם מים ולא משאיר שום שכבה שומנית או נקבוביות סתומות!</p>
                     <div class="purchase-buttons">
-                        <p>לרכישה</p>
                         <a href="https://www.yesstyle.com/en/skin1004-madagascar-centella-light-cleansing-oil-200ml/info.html/pid.1077182361" target="_blank">
                             <span class="btn">YesStyle</span>
                         </a>
@@ -83,6 +106,17 @@
 
                         </a>
                     </div>
+                    </div>
+                </div>
+        </article>
+        
+        
+        
+        
+        
+            <article class="pickedProduct">
+                    
+                   
             </article>
 
             <!-- הבחירה של כותבת ב' -->
@@ -181,13 +215,14 @@
     </section>
 </main>
 
-    <!-- פוטר האתר האחיד והרשמי עם לוגו המכללה -->
-    <footer>
-        <div class="footer-content">
-            <p> 2026 K-GLOW - כל הזכויות שמורות לנעה והדר | הפקולטה לטכנולוגיות למידה, HIT</p>
-            <img src="img/logo-hit.png" alt="לוגו HIT - המכון הטכנולוגי חולון" class="college-logo">
-        </div>
-    </footer>
+
+<footer>
+    <p>2026 K-GLOW - כל הזכויות שמורות לנעה והדר | הפקולטה לטכנולוגיות למידה, HIT</p>
+    <img src="img/logo-hit.png" alt="לוגו HIT - המכון הטכנולוגי חולון" class="college-logo">
+</footer>
+
+
+
 </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="">
 <head>
     <meta charset="utf-8" />
-    <title>צור קשר</title>
+    <title>צרי קשר</title>
     <meta name="description" content="דף צור קשר. צרו קשר עם נעה והדר לכל שאלה והתייעצות" />
     <meta name="keywords" content="צור קשר, יצירת קשר, המלצות, נעה והדר" />
     <meta name="author" content="נעה והדר" />
@@ -28,16 +28,37 @@
             <ul>
                 <li><a href="index.html">דף הבית</a></li>
                 <li><a href="about.html">אודות</a></li>
-                <li><a href="diagnostic.html">אבחון עור</a></li>
-                <li class="active">צור קשר</li>
+                <li class="dropdown">
+                    <a href="#">שגרות טיפוח</a>                <!-- הרשימה הנפתחת חבויה בתוך ה-li -->
+                    <ul class="dropdown-menu">
+                        <li><a href="acne.html">עור אקנתי</a></li>
+                        <li><a href="#" class="disabled-link">עור יבש</a></li>
+                        <li><a href="#" class="disabled-link">עור מעורב</a></li>
+                        <li><a href="#" class="disabled-link">עור בוגר</a></li>
+                        <li><a href="#" class="disabled-link">פיגמנטציה</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">המומלצים שלנו</a>                <!-- הרשימה הנפתחת חבויה בתוך ה-li -->
+                    <ul class="dropdown-menu">
+                        <li><a href="skin1004.html">SKIN1004</a></li>
+                        <li class="disabled-link">SOME BY MI</li>
+                        <li class="disabled-link">Beauty of Joseon</li>
+                        <li class="disabled-link">Anua</li>
+                        <li class="disabled-link">iUNIK</li>
+                        <li class="disabled-link">COSRX</li>
+                        <li class="disabled-link">Cos de Baha</li>
+                    </ul>
+                </li>
+                <li><a class="active">צרי קשר</a></li>
                 <li><a href="siteMap.html">מפת האתר</a></li>
             </ul>
         </nav>
-        <h1>צור קשר</h1>
+        <h1>צרי קשר</h1>
     </header>
 
     <div class="breadcrumb">
-        <a href="index.html">דף הבית</a> &gt; <span>צור קשר</span>
+        <a href="index.html">דף הבית</a> &gt; <span  class="currentPage">צרי קשר</span>
     </div>
 
     <main>
@@ -45,45 +66,46 @@
            
 
                 <p>נשמח לשמוע מכן! מלאו את הפרטים ונחזור אליכן בהקדם.</p>
-                <p>שדות המסומנים בכוכבית (*) הם שדות חובה!</p>
+                <p class="required">שדות המסומנים בכוכבית (*) הם שדות חובה!</p>
 
                 <form>
+                    <input type="hidden" id="myEmail" name="name" value="yourMail.com">
                         <label for="fullName">
-                            שם מלא 
-                            <span class="required">*</span>
-                        <input type="text" id="fullName" placeholder="הקלידי את שמך המלא" required>
-                        </label><br/>
+                            שם מלא
+                            <span class="required">*</span><br/>
+                            <input type="text" id="fullName" placeholder="הקלידי את שמך המלא" required>
+                        </label><br/><br/>
                     
                         <label for="userEmail">
-                            כתובת מייל 
-                            <span class="required">*</span>
-                        <input type="email" id="userEmail" placeholder="name@example.com" required>
-                        </label><br/>
+                            כתובת מייל
+                            <span class="required">*</span><br/>
+                            <input type="email" id="userEmail" placeholder="name@example.com" required>
+                        </label><br/><br/>
                         <label for="userPhone">
                             מספר טלפון
-                            <span class="required">*</span>
-                        <input type="tel" id="userPhone" placeholder="05X-XXXXXXX">
+                            <span class="required">*</span><br/>
+                            <input type="tel" id="userPhone" placeholder="05X-XXXXXXX" required>
 
-                    </label><br/>
+                    </label><br/><br/>
 
                         <label for="issue">
                             נושא הפנייה 
-                            <span class="required">*</span>
-                        <select id="issue" required>
+                            <span class="required">*</span><br/>
+                            <select id="issue" required>
                             <option value="2" selected>בקשת המלצה על מוצר</option>
                             <option value="3">שיתוף פעולה</option>
                             <option value="4">משוב על האתר</option>
                             <option value="5">אחר</option>
                         </select>
-                    </label><br/>
+                    </label><br/><br/>
                     
 
-                        <label for="userMessage">תוכן ההודעה <span class="required">*</span>
-                            
-                        <textarea id="userMessage" rows="5" placeholder="כתבי כאן את גוף ההודעה"></textarea>
-                        </label><br/>
-                    <input type="button" value="שליחה">
+                        <label for="userMessage">תוכן ההודעה <span class="required">*</span><br/>
 
+                            <textarea id="userMessage" rows="5" placeholder="כתבי כאן את גוף ההודעה" required></textarea>
+                        </label><br/><br/>
+                    <input type="submit" value="שליחה" id="formBtn">
+                    <div id="feedback"></div>
                 </form>
         </section>
     </main>
