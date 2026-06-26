@@ -12,9 +12,11 @@
 <div id="container">
 
     <header>
-        <a href="index.html" class="logo-link">
-            <img src="img/k-glow-logo.png" alt="K-glow Logo" class="ourLogo">
-        </a>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/k-glow-logo.png" alt="K-glow Logo" class="ourLogo">
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">דף הבית</a></li>
@@ -42,36 +44,36 @@
                         <li class="disabled-link">Cos de Baha</li>
                     </ul>
                 </li>
-                <li><a class="active">צרי קשר</a></li>
+                <li><a href="contactUs.html">צרי קשר</a></li>
                 <li><a href="siteMap.html">מפת האתר</a></li>
             </ul>
         </nav>
-        <h1>אבחון עור אינטראקטיבי</h1>
+        <h1>שאלון סוג עור</h1>
     </header>
 
     <div class="breadcrumb">
         <a href="index.html">דף הבית</a> <span>&gt;</span> <span>שגרות טיפוח </span><span>&gt;</span> <span class="currentPage">שאלון סוג עור</span>
     </div>
 
-    <main class="diagnostic-main">
-        <p class="narrowText">ברוכה הבאה למערכת האבחון של K-GLOW. עני על השאלות הקצרות שלפנייך, והמערכת תתאים לך בזמן אמת את החומרים והמוצרים הנדרשים לעור קורן, בריא ורענן.</p>
+    <main>
+        <p class="narrowText">ברוכה הבאה לשאלון אבחון העור שלנו! עני על השאלות הבאות, והמערכת תתאים לך את המוצר המתאים ביותר עבורך, כדי שתקבלי עור קורן, בריא ורענן.</p>
 
-        <div class="diagnostic-wrapper">
+        <div class="sideBySide">
 
-            <section class="form-zone">
-                <form id="skinForm" onsubmit="return false;">
+            <section class="skinTypeForm">
+                <form>
 
                     <div class="form-group">
-                        <label for="userName">מה השם שלך? <span class="required">*</span></label>
+                        <label for="userName">מה שמך? <span class="required">*</span></label>
                         <input type="text" id="userName" placeholder="הקלידי שם מלא..." required>
                     </div>
 
                     <div class="form-group">
                         <label>מהו סוג העור שלך? <span class="required">*</span></label>
                         <div class="radio-options">
-                            <label><input type="radio" name="skinType" value="acne" required> עור אקנתי עם פצעונים תקופתיים</label>
-                            <label><input type="radio" name="skinType" value="dry"> עור יבש ומתקלף </label>
-                            <label><input type="radio" name="skinType" value="oily"> עור שמן, מבריק עם נקבוביות פתוחות</label>
+                            <label><input type="radio"  value="1" required> עור אקנתי עם פצעונים תקופתיים</label>
+                            <label><input type="radio"  value="2"> עור יבש ומתקלף </label>
+                            <label><input type="radio" value="3"> עור שמן, מבריק עם נקבוביות פתוחות</label>
                         </div>
                     </div>
 
@@ -83,18 +85,18 @@
                         </div>
                     </div>
 
-                    <button type="button" id="formBtn" disabled>הציגי אבחון סופי</button>
+                    <button type="button" id="formBtn">הציגי תוצאה</button>
                 </form>
             </section>
 
-            <section class="visual-zone">
+            <section class="skinFormResult">
                 <div class="result-box">
-                    <h3>ההתאמה הויזואלית שלך:</h3>
+                    <h3>מוצר חובה עבורך:</h3>
 
-                    <div class="skin-type-images">
+                    <div class="resultProductDisplay">
                         <img src="img/toner.png" alt="טונר לעור אקנתי ושמן" id="imgAcneOily" class="acneSkinCare" style="display:none;">
                         <img src="img/snail.png" alt="ריר חלזונות לעור יבש ופגוע" id="imgDry" class="acneSkinCare" style="display:none;">
-                        <p id="placeholderText">ביחרי סוג עור כדי לראות את בסיס השגרה המומלץ...</p>
+                        <p id="placeholderText">עני על השאלות כדי לקבל המלצה :)</p>
                     </div>
 
                     <div class="treatment-boosters">
