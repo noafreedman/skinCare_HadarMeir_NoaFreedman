@@ -84,7 +84,19 @@ nav ul li .dropdown-menu li  {
     font-weight: bold;
 }
 
-.breadcrumb > a {
+.breadcrumb ol li {
+    display: inline-block;
+}
+
+.breadcrumb ol li:after {
+content:" >"
+}
+
+.breadcrumb ol li:last-child:after {
+    content:""
+}
+
+.breadcrumb a {
     text-decoration: none;
     color: #4c370d;
 }
@@ -137,6 +149,7 @@ main, .breadcrumb{
 
 .breadcrumb{
     font-size: 0.75rem;
+    margin: 10px;
 }
 
 .breadcrumb a:hover, .developedPages:hover{
