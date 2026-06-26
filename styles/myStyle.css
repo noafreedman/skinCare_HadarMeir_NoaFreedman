@@ -568,7 +568,10 @@ footer p {
 
 
 
-
+.erroredInput {
+    font-weight: bold;
+    color: red;
+}
 
 
 

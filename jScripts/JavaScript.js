@@ -1,117 +1,59 @@
-﻿function skinFormResult(){
+﻿function skinFormResult() {
+    const userName = document.getElementById("userName").value; // שליפת השם מהתיבה
+    const radio1 = document.getElementById("radio1").checked; // בדיקת קיום הסימון
+    const radio2 = document.getElementById("radio2").checked; // בדיקת קיום הסימון
+    const radio3 = document.getElementById("radio3").checked; // בדיקת קיום הסימון
+    const checkRedness = document.getElementById("checkRedness").checked; // בדיקת קיום הסימון
+    const checkPigmentation = document.getElementById("checkPigmentation").checked; // בדיקת קיום הסימון
     
-}
+    document.getElementById("boosterCentella").style.display = "none"; // איפוס תיבת בוסטר 1
+    document.getElementById("boosterVitaminC").style.display = "none"; // איפוס תיבת בוסטר 2
+    document.getElementById("diagnosticResultSummary").style.display = "none"; // מנקה את הסיכום הישן למקרה שיש שגיאה עכשיו
+    document.getElementById("imgAcneOily").style.display = "none"; // הסתרת תמונה 1
+    document.getElementById("imgDry").style.display = "none"; // הסתרת תמונה 2
 
+    document.getElementById("skinForResult").innerHTML = ""; // איפוס ספאן בתוצאה
+    document.getElementById("rednessForResult").innerHTML = ""; // איפוס ספאן בתוצאה
+    document.getElementById("pigmentationForResult").innerHTML = ""; // איפוס ספאן בתוצאה
+    document.getElementById("nameForResult").innerHTML = ""; // איפוס ספאן של השם
 
+    if (userName.length < 2) {
+        document.getElementById("userNameError").innerHTML = "הזיני שם תקין (לפחות 2 אותיות)"; // הצגת שגיאה עבור השם
+    }
+    else if (radio1 === false && radio2 === false && radio3 === false) { // אם לא סומן סוג עור
+        document.getElementById("radioError").innerHTML = "בחרי סוג עור כדי לקבל המלצה!"; // הצגת שגיאה עבור בחירה בסוג עור
+        document.getElementById("userNameError").innerHTML = ""; // איפוס שגיאה עבור השם
+    }
+    else {
+        document.getElementById("placeholderText").innerHTML = ""; // מחיקת טקסט ברירת המחדל עם קבלת התוצאה
+        document.getElementById("radioError").innerHTML = ""; // איפוס שגיאה עבור בחירה בסוג עור
+        document.getElementById("userNameError").innerHTML = ""; // איפוס שגיאה עבור השם
 
+        document.getElementById("diagnosticResultSummary").style.display = "block"; // הצגת עיצוב עבור תוצאה
+        document.getElementById("nameForResult").innerHTML = "היי " + userName + ", התאמנו לך שגרת טיפוח K-GLOW מותאמת אישית!"; // הדפסת השם שהוקלד בתיבה
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    // אלמנטים של הטופס
-    const userNameInput = document.getElementById("userName");
-    const skinTypeRadios = document.getElementsByName("skinType");
-    const checkRedness = document.getElementById("checkRedness");
-    const checkPigmentation = document.getElementById("checkPigmentation");
-    const formBtn = document.getElementById("formBtn");
-
-    // אלמנטים חזותיים
-    const imgAcneOily = document.getElementById("imgAcneOily");
-    const imgDry = document.getElementById("imgDry");
-    const placeholderText = document.getElementById("placeholderText");
-    const boosterCentella = document.getElementById("boosterCentella");
-    const boosterVitaminC = document.getElementById("boosterVitaminC");
-    const summaryOutput = document.getElementById("diagnosticResultSummary");
-
-    // פונקציה לבדיקה אם הטופס מוכן כדי להפעיל את הכפתור
-    function validateForm() {
-        const isNameFilled = userNameInput.value.trim() !== "";
-
-        let isRadioSelected = false;
-        for (let i = 0; i < skinTypeRadios.length; i++) {
-            if (skinTypeRadios[i].checked) {
-                isRadioSelected = true;
-                break;
+        if (radio1 === true || radio3 === true) { // אם סומן סוג עור 1 או 3
+            document.getElementById("imgAcneOily").style.display = "block"; // הצגת מוצר בהתאם לבחירה באופציה 1 או 3
+            if (radio1 === true) { // אם סומן סוג עור 1 
+                document.getElementById("skinForResult").innerHTML = "בחרת בסוג עור אקנתי עם פצעונים תקופתיים"; // הדפסת סוג העור שנבחר
             }
+            else { // אם סומן סוג עור 3
+                document.getElementById("skinForResult").innerHTML = "בחרת בסוג עור שמן, מבריק עם נקבוביות פתוחות"; // הדפסת סוג העור שנבחר
+            }
+            document.getElementById("skinForResult").innerHTML += ". לכן בחרנו עבורך <strong>את הטונר של Anua</strong>."; // שם המוצר שנבחר עבור סוג עור 1 או 3
+        }
+        else { // אם סומן סוג עור 2 (עור יבש)
+            document.getElementById("imgDry").style.display = "block"; // הצגת מוצר בהתאם לבחירה באופציה 2
+            document.getElementById("skinForResult").innerHTML = "בחרת בסוג עור יבש ומתקלף. לכן בחרנו עבורך את <strong>ריר החלזונות של COSRX</strong>."; // הדפסת סוג העור שנבחר
         }
 
-        // שינוי מצב הכפתור
-        if (isNameFilled && isRadioSelected) {
-            formBtn.disabled = false;
-        } else {
-            formBtn.disabled = true;
+        if (checkRedness === true) { // אם סומן אדמומיות
+            document.getElementById("boosterCentella").style.display = "block"; // הצגת עיצוב עבור אדמומיות
+            document.getElementById("rednessForResult").innerHTML = "מוצג רכיב מומלץ עבור <strong>אדמומיות</strong>."; // הדפסת רכיב מומלץ לאדמומיות
+        }
+        if (checkPigmentation === true) { // אם סומן פיגמנטציה
+            document.getElementById("boosterVitaminC").style.display = "block"; // הצגת עיצוב עבור פיגמנטציה
+            document.getElementById("pigmentationForResult").innerHTML = "מוצגים רכיבים מומלצים עבור <strong>פיגמנטציה</strong>."; // הדפסת רכיבים מומלצים לפיגמנטציה
         }
     }
-
-    // האזנה לשינויים בטופס רק בשביל שחרור הכפתור
-    userNameInput.addEventListener("input", validateForm);
-    skinTypeRadios.forEach(radio => {
-        radio.addEventListener("change", validateForm);
-    });
-
-    // הלחיצה הגדולה - הכל משתנה כאן ביחד!
-    formBtn.addEventListener("click", function () {
-        const name = userNameInput.value.trim();
-        let selectedSkinValue = "";
-        let selectedSkinTypeText = "";
-
-        for (let i = 0; i < skinTypeRadios.length; i++) {
-            if (skinTypeRadios[i].checked) {
-                selectedSkinValue = skinTypeRadios[i].value;
-                selectedSkinTypeText = skinTypeRadios[i].parentNode.textContent.trim();
-                break;
-            }
-        }
-
-        // 1. העלמת טקסט ברירת המחדל
-        if (placeholderText) placeholderText.style.display = "none";
-
-        // 2. החלפת תמונות לפי סוג עור
-        imgAcneOily.style.display = "none";
-        imgDry.style.display = "none";
-
-        if (selectedSkinValue === "acne" || selectedSkinValue === "oily") {
-            imgAcneOily.style.display = "block";
-        } else if (selectedSkinValue === "dry") {
-            imgDry.style.display = "block";
-        }
-
-        // 3. הצגת רכיבי הבוסטרים המשניים רק אם סומנו בצ'קבוקס
-        if (checkRedness.checked) {
-            boosterCentella.style.display = "block";
-        } else {
-            boosterCentella.style.display = "none";
-        }
-
-        if (checkPigmentation.checked) {
-            boosterVitaminC.style.display = "block";
-        } else {
-            boosterVitaminC.style.display = "none";
-        }
-
-        // 4. יצירת הודעת הסיכום הטקסטואלית
-        let extraTreatments = [];
-        if (checkRedness.checked) extraTreatments.push("טיפול באדמומיות והרגעת העור");
-        if (checkPigmentation.checked) extraTreatments.push("הבהרת פיגמנטציה וכתמים");
-
-        let extraText = "";
-        if (extraTreatments.length > 0) {
-            extraText = `<br><strong>תוספות ממוקדות לשגרה שלך:</strong> ${extraTreatments.join(" וכן ")}.`;
-        } else {
-            extraText = "<br>לא נבחרו בעיות עור משניות, השגרה שלך תתמקד בבסיס המאוזן והבריא.";
-        }
-
-        summaryOutput.innerHTML = `
-            <h3> האבחון המושלם עבורך, ${name}!</h3>
-            <p>
-                על פי הנתונים שהזנת, סוג העור הראשי שלך הוגדר כ: <strong>${selectedSkinTypeText}</strong>.
-                בנינו עבורך את בסיס השגרה הקוריאנית המתאים ביותר לצרכים אלו, והמוצרים המומלצים מוצגים כעת על המסך.
-                ${extraText}
-            </p>
-            <p><strong>טיפ מצוות K-GLOW:</strong> הקפידי על התמדה וסבלנות, התוצאות המדהימות בדרך!</p>
-        `;
-
-        // הצגת אזור הסיכום מתחת לתמונות ולבוסטרים
-        summaryOutput.style.display = "block";
-        summaryOutput.scrollIntoView({ behavior: 'smooth' });
-    });
-});
+}

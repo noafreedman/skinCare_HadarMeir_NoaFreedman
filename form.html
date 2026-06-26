@@ -82,20 +82,23 @@
 
                     <div class="form-group">
                         <label for="userName">מה שמך? <span class="required">*</span></label>
-                        <input type="text" id="userName" placeholder="הקלידי שם מלא..." required>
+                        <input type="text" id="userName" placeholder="הקלידי שם מלא..." required><br/><br/>
+                        <span class="erroredInput" id="userNameError"></span>
                     </div>
 
                     <div class="form-group">
                         <label>מהו סוג העור שלך? <span class="required">*</span></label>
                         <div class="radio-options">
-                            <label><input type="radio" name="skinType" value="acne" required> עור אקנתי עם פצעונים תקופתיים</label>
-                            <label><input type="radio" name="skinType" value="dry"> עור יבש ומתקלף </label>
-                            <label><input type="radio" name="skinType" value="oily"> עור שמן, מבריק עם נקבוביות פתוחות</label>
-                        </div>
+                            <label><input id="radio1" type="radio" name="skinType" value="acne" required> עור אקנתי עם פצעונים תקופתיים</label>
+                            <label><input id="radio2" type="radio" name="skinType" value="dry"> עור יבש ומתקלף </label>
+                            <label><input id="radio3" type="radio" name="skinType" value="oily"> עור שמן, מבריק עם נקבוביות פתוחות</label>
+                        </div><br/>
+                        <span class="erroredInput" id="radioError"></span>
+
                     </div>
 
                     <div class="form-group">
-                        <label><legend>סמני בעיות משניות שתרצי לטפל בהן (ניתן לבחור יותר מאחת):</legend></label>
+                        <label>סמני בעיות משניות שתרצי לטפל בהן (ניתן לבחור יותר מאחת):</label>
                         <div class="checkbox-options">
                             <label><input type="checkbox" id="checkRedness" value="redness"> אדמומיות ועור רגיש או מגורה</label>
                             <label><input type="checkbox" id="checkPigmentation" value="pigmentation"> פיגמנטציה, כתמי שמש או סימני פצעים</label>
@@ -125,8 +128,17 @@
                         </div>
                     </div>
 
-                    <div id="diagnosticResultSummary" class="summary-output" style="display: none;"></div>
+                    <div id="diagnosticResultSummary" class="summary-output" style="display: none;">
+                        <span id="nameForResult"></span><br/><br/>
+                        <span id="skinForResult"></span><br/><br/>
+                        <span id="rednessForResult"></span><br/><br/>
+                        <span id="pigmentationForResult"></span><br/><br/>
+                        <span id="chosenProduct"></span>                        
+                    </div>
                 </div>
             </section>
         </div>
     </main>
+</div>
+</body>
+</html>
