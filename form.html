@@ -19,8 +19,30 @@
             <ul>
                 <li><a href="index.html">דף הבית</a></li>
                 <li><a href="about.html">אודות</a></li>
-                <li><a href="diagnostic.html" class="active">אבחון עור</a></li>
-                <li><a href="contactUs.html">צור קשר</a></li>
+                <li class="dropdown">
+                    <a href="#">שגרות טיפוח</a>                <!-- הרשימה הנפתחת חבויה בתוך ה-li -->
+                    <ul class="dropdown-menu">
+                        <li class="disabled-link">שאלון סוג עור</li>
+                        <li><a href="acne.html">עור אקנתי</a></li>
+                        <li><a href="#" class="disabled-link">עור יבש</a></li>
+                        <li><a href="#" class="disabled-link">עור מעורב</a></li>
+                        <li><a href="#" class="disabled-link">עור בוגר</a></li>
+                        <li><a href="#" class="disabled-link">פיגמנטציה</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">המומלצים שלנו</a>                <!-- הרשימה הנפתחת חבויה בתוך ה-li -->
+                    <ul class="dropdown-menu">
+                        <li><a href="skin1004.html">SKIN1004</a></li>
+                        <li class="disabled-link">SOME BY MI</li>
+                        <li class="disabled-link">Beauty of Joseon</li>
+                        <li class="disabled-link">Anua</li>
+                        <li class="disabled-link">iUNIK</li>
+                        <li class="disabled-link">COSRX</li>
+                        <li class="disabled-link">Cos de Baha</li>
+                    </ul>
+                </li>
+                <li><a class="active">צרי קשר</a></li>
                 <li><a href="siteMap.html">מפת האתר</a></li>
             </ul>
         </nav>
@@ -28,7 +50,7 @@
     </header>
 
     <div class="breadcrumb">
-        <a href="index.html">דף הבית</a> <span>אבחון עור</span>
+        <a href="index.html">דף הבית</a> <span>&gt;</span> <span>שגרות טיפוח </span><span>&gt;</span> <span class="currentPage">שאלון סוג עור</span>
     </div>
 
     <main class="diagnostic-main">
