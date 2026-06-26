@@ -1,4 +1,11 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+﻿function skinFormResult(){
+    
+}
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
 
     // אלמנטים של הטופס
     const userNameInput = document.getElementById("userName");

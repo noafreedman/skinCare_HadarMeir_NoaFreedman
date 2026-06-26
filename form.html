@@ -71,21 +71,21 @@
                     <div class="form-group">
                         <label>מהו סוג העור שלך? <span class="required">*</span></label>
                         <div class="radio-options">
-                            <label><input type="radio"  value="1" required> עור אקנתי עם פצעונים תקופתיים</label>
-                            <label><input type="radio"  value="2"> עור יבש ומתקלף </label>
-                            <label><input type="radio" value="3"> עור שמן, מבריק עם נקבוביות פתוחות</label>
+                            <label><input type="radio" name="skinType" value="acne" required> עור אקנתי עם פצעונים תקופתיים</label>
+                            <label><input type="radio" name="skinType" value="dry"> עור יבש ומתקלף </label>
+                            <label><input type="radio" name="skinType" value="oily"> עור שמן, מבריק עם נקבוביות פתוחות</label>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>סמני בעיות משניות שתרצי לטפל בהן (ניתן לבחור יותר מאחת):</label>
+                        <label><legend>סמני בעיות משניות שתרצי לטפל בהן (ניתן לבחור יותר מאחת):</legend></label>
                         <div class="checkbox-options">
                             <label><input type="checkbox" id="checkRedness" value="redness"> אדמומיות ועור רגיש או מגורה</label>
                             <label><input type="checkbox" id="checkPigmentation" value="pigmentation"> פיגמנטציה, כתמי שמש או סימני פצעים</label>
                         </div>
                     </div>
 
-                    <button type="button" id="formBtn">הציגי תוצאה</button>
+                    <button type="button" id="formBtn" onclick="skinFormResult()">הציגי תוצאה</button>
                 </form>
             </section>
 
@@ -101,10 +101,10 @@
 
                     <div class="treatment-boosters">
                         <div id="boosterCentella" class="booster-item">
-                            <span> רכיב הרגעה: Centella Asiatica</span>
+                            <span> רכיב הרגעה מומלץ עבורך: Centella Asiatica</span>
                         </div>
                         <div id="boosterVitaminC" class="booster-item">
-                            <span> רכיב הבהרה: Vitamin C / Niacinamide</span>
+                            <span> רכיב הבהרה מומלץ עבורך: Vitamin C / Niacinamide</span>
                         </div>
                     </div>
 
