@@ -257,8 +257,23 @@ footer p {
 /* ======================================================= */
 /* חיברנו את המחלקה .card-link של עמוד הבית לעיצוב הקיים שלכן */
 
+.pageName a {
+    text-decoration: none;
+    color: #fcfcfc;
+}
+.pageName a:hover {
+    text-decoration: none;
+    color: #4c370d;
+}
 
-
+.categoryPage a{
+    text-decoration: none;
+    color: #4c370d;
+}
+.categoryPage a:hover{
+    text-decoration: none;
+    color: #fcfcfc;
+}
 .purchase-buttons a, #formBtn, .card-link, .mapColumn > :first-child, .pageBtn:hover{
     text-decoration: none;
     background-color: #ff6b8b;
@@ -268,7 +283,6 @@ footer p {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 10px;
     text-align: center;
     font-weight: 500;
     border: none;
