@@ -237,6 +237,7 @@ footer p {
     object-fit: contain;
     display: block;
     margin: 20px auto;         /* ממרכז את התמונה יפה תחת התוכן של עמוד הבית */
+    padding: 30px;
 }
 
 .acneSkinCare {
@@ -348,7 +349,6 @@ footer p {
 .section-title {
     text-align: center;
     color: #333;
-    font-size: 1.8rem;
     margin-bottom: 25px;
 }
 
@@ -400,12 +400,25 @@ footer p {
 
 
 }
-
+.features-grid{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 25px;
+    
+}
 /* --- עיצוב עמוד האבחון האינטראקטיבי - תיקון פריסה וריווח --- */
-
+.feature-card{
+    background-color: rgba(255, 230, 235, 0.15);
+    padding: 35px;
+    border-radius: 8px;
+    border: 1px solid #ffafc0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
 /* קופסת הטופס */
-.skinTypeForm {
+.skinTypeForm   {
+    
     min-width: 620px;
     background-color: rgba(255, 230, 235, 0.15);
     padding: 35px;
@@ -510,7 +523,7 @@ footer p {
     border-radius: 8px;
     background-color: #fff0f3;
     font-weight: bold;
-    text-align: right;
+    text-align: center;
     box-shadow: 0 2px 5px rgba(255, 107, 139, 0.1);
 }
 
