@@ -5,19 +5,10 @@
     const radio3 = document.getElementById("radio3").checked; // בדיקת קיום הסימון
     const checkRedness = document.getElementById("checkRedness").checked; // בדיקת קיום הסימון
     const checkPigmentation = document.getElementById("checkPigmentation").checked; // בדיקת קיום הסימון
-    
-    document.getElementById("boosterCentella").style.display = "none"; // איפוס תיבת בוסטר 1
-    document.getElementById("boosterVitaminC").style.display = "none"; // איפוס תיבת בוסטר 2
-    document.getElementById("diagnosticResultSummary").style.display = "none"; // מנקה את הסיכום הישן למקרה שיש שגיאה עכשיו
-    document.getElementById("imgAcneOily").style.display = "none"; // הסתרת תמונה 1
-    document.getElementById("imgDry").style.display = "none"; // הסתרת תמונה 2
 
-    document.getElementById("skinForResult").innerHTML = ""; // איפוס ספאן בתוצאה
-    document.getElementById("rednessForResult").innerHTML = ""; // איפוס ספאן בתוצאה
-    document.getElementById("pigmentationForResult").innerHTML = ""; // איפוס ספאן בתוצאה
-    document.getElementById("nameForResult").innerHTML = ""; // איפוס ספאן של השם
+    clean();    // הפעלת פונקציה לאיפוס והסתרת תמונות (ניקוי)
 
-    if (userName.length < 2) {
+    if (userName.length < 2) { // אם אורך השם שהוזן קטן מ-2 תווים
         document.getElementById("userNameError").innerHTML = "הזיני שם תקין (לפחות 2 אותיות)"; // הצגת שגיאה עבור השם
     }
     else if (radio1 === false && radio2 === false && radio3 === false) { // אם לא סומן סוג עור
@@ -56,4 +47,18 @@
             document.getElementById("pigmentationForResult").innerHTML = "מוצגים רכיבים מומלצים עבור <strong>פיגמנטציה</strong>."; // הדפסת רכיבים מומלצים לפיגמנטציה
         }
     }
+}
+
+function clean(){
+    document.getElementById("boosterCentella").style.display = "none"; // איפוס תיבת בוסטר 1
+    document.getElementById("boosterVitaminC").style.display = "none"; // איפוס תיבת בוסטר 2
+    document.getElementById("diagnosticResultSummary").style.display = "none"; // מנקה את הסיכום הישן למקרה שיש שגיאה עכשיו
+    document.getElementById("imgAcneOily").style.display = "none"; // הסתרת תמונה 1
+    document.getElementById("imgDry").style.display = "none"; // הסתרת תמונה 2
+
+    document.getElementById("skinForResult").innerHTML = ""; // איפוס ספאן בתוצאה
+    document.getElementById("rednessForResult").innerHTML = ""; // איפוס ספאן בתוצאה
+    document.getElementById("pigmentationForResult").innerHTML = ""; // איפוס ספאן בתוצאה
+    document.getElementById("nameForResult").innerHTML = ""; // איפוס ספאן של השם
+
 }
