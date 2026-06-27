@@ -21,20 +21,18 @@ header {
     margin-bottom: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(76,55,13,0.05);
-
-    /* סידור האלמנטים אחד מתחת לשני (טור) וממורכזים */
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* מרווח קבוע בין הלוגו -> לניווט -> לכותרת */
+    gap: 15px; 
 }
 
-/* שורת הלוגו - התיקון שמכריח אותו להיצמד לימין למרות שאר המרכוס */
 .logo-link {
     width: 100%;
     display: flex;
-    justify-content: flex-start; /* מצמיד את תוכן השורה לימין */
-    align-self: flex-start;      /* מונע מה-header למרכז את הדיב/קישור הזה */
+    justify-content: flex-start; 
+    align-self: flex-start;     
 }
 
 .ourLogo {
@@ -43,42 +41,37 @@ header {
     display: block;
 }
 
-/* תפריט הניווט - ממוקם מעל הכותרת וממורכז */
 header nav {
     width: 100%;
     display: flex;
-    justify-content: center; /* מרכז את התפריט אופקית */
+    justify-content: center; 
     margin-bottom: 5px;
 }
-/* 1. נגדיר את פריט האבא כ"עוגן" יחסי עבור התפריט הנפתח */
+
 nav ul li.dropdown {
     position: relative;
 }
 
-/* 2. נחביא את התפריט הנפתח כברירת מחדל ונמקם אותו מתחת לאבא */
 nav ul li .dropdown-menu {
-    display: none;             /* מחביא את התפריט */
-    position: absolute;        /* מאפשר לו "לצוף" מתחת לתפריט הראשי */
-    top: 100%;                 /* מציב אותו בדיוק מתחת ללינק האבא */
-    right: 0;                  /* מיישר אותו לימין (בגלל שהאתר ב-RTL) */
-    background-color: #fcfcfc;   /* צבע רקע לתפריט הנפתח */
-    list-style-type: none;     /* מעלים את הנקודות של הרשימה */
+    display: none;            
+    position: absolute;       
+    top: 100%;                
+    right: 0;                
+    background-color: #fcfcfc;  
+    list-style-type: none;     
     padding: 10px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* צל קטן שייראה צף */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1); 
     border-radius: 8px;
 }
 
-/* 3. הקסם: שימוש בסלקטור צאצא ומצב מדומיין (:hover) מתוך השיעור! */
-/* ברגע שעושים hover על ה-li של האבא -> תציג את ה-dropdown-menu שבתוכו */
 nav ul li.dropdown:hover .dropdown-menu {
-    display: block;            /* מציג את התפריט החבוי */
+    display: block;           
 }
 
-/* 4. עיצוב הלינקים הפנימיים בתוך התפריט הנפתח */
 nav ul li .dropdown-menu li  {
     display: block;
     padding: 8px 15px;
-    white-space: nowrap;       /* מונע מהטקסט להישבר לשתי שורות */
+    white-space: nowrap;       
     color: #4c370d;
     text-decoration: none;
     font-weight: bold;
@@ -101,15 +94,14 @@ content:" >"
     color: #4c370d;
 }
 
-/* שינוי צבע ברקע כשעוברים על האופציות בתוך התפריט הנפתח */
 nav ul li .dropdown-menu li:hover {
     background-color: #f5f5f5;
 }
 
 header nav ul {
     list-style: none;
-    display: flex; /* מסדר את הלינקים בשורה מאוזנת */
-    gap: 25px;     /* רווח שווה בין כפתורי הניווט */
+    display: flex; 
+    gap: 25px; 
 }
 
 header nav a, li.active {
@@ -121,22 +113,22 @@ header nav a, li.active {
 }
 
 header nav a:hover, header nav a.active, li.active, .currentPage, .developedPages, .reasonsToLoveIt strong {
-    color: #ff6b8b; /* הדגשת העמוד הנוכחי או במעבר עכבר */
+    color: #ff6b8b; 
     text-decoration: none;
     font-weight: bold;
 }
-/* וב-CSS מוסיפים חוק קטן (שימוש מעולה בסלקטור צאצא מתוך המצגת!): */
+
 nav ul li.dropdown > a {
-    cursor: default; /* הופך את העכבר לחץ רגיל במקום יד לחיצה */
+    cursor: default; 
 }
 
-/* כשהעכבר מרחף על הקישור הלא פעיל */
+
 .disabled-link:hover {
-    cursor: not-allowed; /* הופך את הסמן לסמל של "אין כניסה" */
-    color: #ffafc0;         /* אופציונלי: הופך את הטקסט לאפור בהיר כדי לשדר שהוא חסום */
+    cursor: not-allowed; 
+    color: #ffafc0;  
 }
 
-/* כותרת ה-h1 - ממורכזת לחלוטין למרכז המלבן ומתחת לניווט */
+
 h1 {
     margin: 0;
     font-size: 2.2rem;
@@ -155,23 +147,23 @@ main, .breadcrumb{
 .breadcrumb a:hover, .developedPages:hover{
     text-decoration: underline;
 }
-/* --- עיצוב ה-FOOTER כמלבן חלול בצבע של ה-header --- */
+
 footer {
     margin-top: 50px;
-    background-color: #fcfcfc;    /* ללא צבע רקע (שקוף/חלול) */
-    border: 2px solid #ffafc0;        /* מסגרת בצבע הורוד של ה-header */
-    padding: 15px 30px;               /* יצירת מרווח פנימי למלבן */
-    border-radius: 8px;               /* פינות מעוגלות התואמות להדר */
+    background-color: #fcfcfc;    
+    border: 2px solid #ffafc0;       
+    padding: 15px 30px;            
+    border-radius: 8px;             
     display: flex;
     justify-content: space-between;
     align-items: center;
-    direction: ltr; /* הופך כיוון כדי שהלוגו ייצמד לימין הפיזי של הדף */
+    direction: ltr;
 }
 
 footer p {
     direction: rtl;
     margin: 0;
-    color: #4c370d;                   /* צבע טקסט כהה וקריא */
+    color: #4c370d;              
     font-weight: 500;
 }
 
@@ -181,7 +173,6 @@ footer p {
     display: block;
 }
 
-/* --- סידור תוכן עמוד האודות --- */
 .fixedAbout {
     display: flex;
     flex-wrap: wrap;
@@ -190,7 +181,6 @@ footer p {
     margin-top: 20px;
 }
 
-/* הגבלת הטקסט עד לחצי/אמצע העמוד */
 .about-content {
     flex: 1;
     min-width: 300px;
@@ -198,7 +188,6 @@ footer p {
     line-height: 1.6;
 }
 
-/* אזור התמונות - אחת ליד השנייה */
 .sideBySide {
     flex: 1;
     display: flex;
@@ -213,21 +202,20 @@ footer p {
 
 .figure {
     display: flex;
-    flex-direction: column;   /* מסדר את התמונה והטקסט זה תחת זה */
-    align-items: center;      /* ממרכז אותם אופקית בצורה מושלמת */
-    text-align: center;       /* ממרכז את שורות הטקסט עצמן */
-    margin: 0;                /* מוחק את הריווח המובנה של הדפדפן שדחף את התמונות! */
+    flex-direction: column;   
+    align-items: center;     
+    text-align: center;      
+    margin: 0;               
 }
 
-/* אופציונלי: מוסיף רווח קטן בין התמונה לטקסט שמתחתיה */
 .image-caption {
     margin-top: 15px;
     line-height: 1.5;
 }
 
 .figuresChoice {
-    width: 200px !important;
-    height: 280px !important;
+    width: 200px;
+    height: 280px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -241,15 +229,12 @@ footer p {
     width: 140px;
 }
 
-/* ======================================================= */
-/* --- עיצוב תמונת עמוד הבית (all_products.png) המוקטנת --- */
-/* ======================================================= */
 #allProducts {
-    width: 280px !important;   /* הקטנו לרוחב קומפקטי ומתאים למסך */
-    height: auto !important;   /* שומר על הפרוטפורציות המקוריות של התמונה */
+    width: 280px; 
+    height: auto;  
     object-fit: contain;
     display: block;
-    margin: 20px auto;         /* ממרכז את התמונה יפה תחת התוכן של עמוד הבית */
+    margin: 20px auto;       
     padding: 30px;
 }
 
@@ -265,11 +250,6 @@ footer p {
     flex-direction: row;
     gap: 20px;
 }
-
-/* ======================================================= */
-/* --- סנכרון ועיצוב הכפתורים: עמודי תוכן + עמוד הבית --- */
-/* ======================================================= */
-/* חיברנו את המחלקה .card-link של עמוד הבית לעיצוב הקיים שלכן */
 
 .pageName a {
     text-decoration: none;
@@ -291,9 +271,9 @@ footer p {
 .purchase-buttons a, #formBtn, .card-link, .mapColumn > :first-child, .pageBtn:hover{
     text-decoration: none;
     background-color: #ff6b8b;
-    color: #fcfcfc !important; /* דואג שהטקסט תמיד יהיה בהיר על הורוד הכהה */
-    display: inline-block;     /* מתאים לכפתור עצמאי בעמוד הבית */
-    width: 180px;              /* הגדלתי טיפה מ-150 כדי שטקסט ארוך כמו "לקריאת הסיפור שלנו" לא יישבר */
+    color: #fcfcfc; 
+    display: inline-block;    
+    width: 180px;             
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -301,7 +281,7 @@ footer p {
     font-weight: 500;
     border: none;
     box-sizing: border-box;
-    transition: all 0.2s ease; /* מעבר חלק במעבר עכבר */
+    transition: all 0.2s ease; 
     margin: 0;
 
 }
@@ -310,7 +290,6 @@ footer p {
     cursor: pointer;
 }
 
-/* ברירת המחדל לכל הכפתורים (העיצוב הוורוד/קורל) */
 .pageBtn {
     border-radius: 8px;
     display: flex;
@@ -321,10 +300,9 @@ footer p {
     margin: 0;
 }
 
-/* אפקט ה-Hover המסונכרן לכל הכפתורים באתר */
 .purchase-buttons a:hover, #formBtn:hover, .card-link:hover, .mapColumn > :first-child:hover, .pageBtn {
     background-color: #ffafc0;
-    color: #4c370d !important; /* מחליף לטקסט חום-כהה יפה וקריא */
+    color: #4c370d; 
     font-weight: bold;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -351,42 +329,38 @@ footer p {
     text-align: center;
 }
 
-/* --- מדור הטיפים המשודרג בעמוד הבית --- */
 .tips-section {
     margin: 50px auto;
-    max-width: 900px; /* רוחב מושלם לשני טורים */
+    max-width: 900px; 
     padding: 0 20px;
 }
 
-/* כותרת המדור */
+
 .section-title {
     text-align: center;
     color: #333;
     margin-bottom: 25px;
 }
 
-/* פריסת שני הטיפים זה לצד זה */
 .tips-grid {
     display: flex;
     gap: 25px;
-    flex-wrap: wrap; /* מאפשר להם לרדת שורה במסכים קטנים כמו טלפון */
+    flex-wrap: wrap; 
 }
-/* פלט הודעת סיכום מעודכן - מותאם לישיבה בתוך הטור השמאלי */
 
-/* עיצוב כרטיסיית טיפ בודדת */
 .tip-card, #diagnosticResultSummary {
     flex: 1;
     margin-top: 30px;
 
-    min-width: 280px; /* מונע מהם להתכווץ מדי */
-    background-color: #fff0f3; /* ורוד בהיר ורך */
-    border-right: 5px solid #ff6b8b; /* פס הדגשה ורוד בצד ימין */
+    min-width: 280px; 
+    background-color: #fff0f3;
+    border-right: 5px solid #ff6b8b; 
     border-radius: 8px;
     padding: 22px;
     box-shadow: 0 2px 5px rgba(255, 107, 139, 0.06);
 }
 
-/* תגית המספר של הטיפ */
+
 .tip-card .tip-badge {
     display: inline-block;
     background-color: #ff6b8b;
@@ -419,7 +393,7 @@ footer p {
     gap: 25px;
     
 }
-/* --- עיצוב עמוד האבחון האינטראקטיבי - תיקון פריסה וריווח --- */
+
 .feature-card{
     background-color: rgba(255, 230, 235, 0.15);
     padding: 35px;
@@ -429,7 +403,7 @@ footer p {
     text-align: center;
 }
 
-/* קופסת הטופס */
+
 .skinTypeForm   {
     
     min-width: 620px;
@@ -440,7 +414,6 @@ footer p {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* קופסת התוצאות משמאל */
 .skinFormResult {
     min-width: 500px;
     background: #fcfcfc;
@@ -450,12 +423,11 @@ footer p {
     text-align: center;
 }
 
-/* קבוצת שאלה */
+
 .form-group {
     margin-bottom: 35px;
 }
 
-/* כותרת השאלה */
  label {
     display: block;
     font-weight: bold;
@@ -466,18 +438,18 @@ footer p {
     width: 100%;
 }
 
-/* הבלוקים שמכריחים את האפשרויות לרדת שורה בטור אנכי */
+
 .radio-options, .checkbox-options {
     display: flex;
-    flex-direction: column !important;
+    flex-direction: column;
     gap: 15px;
     width: 100%;
 }
 
-/* שורת אפשרות בודדת */
+
 .radio-options label, .checkbox-options label {
-    display: flex !important;
-    flex-direction: row !important;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     margin: 0;
     font-weight: normal;
@@ -487,18 +459,17 @@ footer p {
     width: 100%;
 }
 
-/* ניטרול מוחלט של ה-300px ששובר את הרדיו והצ'קבוקסים */
 .radio-options input[type="radio"],
 .checkbox-options input[type="checkbox"] {
-    width: auto !important;
-    height: auto !important;
-    margin-left: 12px !important;
-    margin-right: 0 !important;
+    width: auto;
+    height: auto;
+    margin-left: 12px;
+    margin-right: 0;
     transform: scale(1.2);
     cursor: pointer;
 }
 
-/* תיבת הזנת השם */
+
 #userName, form input, select, textarea {
     width: 100% !important;
     max-width: 350px;
@@ -510,7 +481,7 @@ footer p {
     color: #4c370d;
 }
 
-/* אזור התמונות הדינמיות */
+
 .resultProductDisplay {
     margin: 25px 0;
     min-height: 160px;
@@ -519,7 +490,7 @@ footer p {
     align-items: center;
 }
 
-/* הבוסטרים המשניים */
+
 .treatment-boosters {
     margin-top: 25px;
     display: flex;
@@ -527,7 +498,7 @@ footer p {
     gap: 15px;
 }
 
-/* שינוי: הבוסטרים מוסתרים לחלוטין כברירת מחדל עד הלחיצה */
+
 .booster-item {
     display: none;
     border: 1px solid #ff6b8b;
@@ -540,32 +511,25 @@ footer p {
     box-shadow: 0 2px 5px rgba(255, 107, 139, 0.1);
 }
 
-
-
-
-
-/* הקונטיינר החיצוני ביותר */
 .fullMap {
     padding: 20px;
 }
 
-/* אלמנט השורה שמחזיק את הטורים */
+
 .mapFrame {
     display: flex;
     justify-content: center;
-    flex-direction: row; /* מסדר את הטורים בשורה אופקית */
-    flex-wrap: nowrap;   /* מונע מהם לרדת שורה */
-    gap: 20px;           /* רווח בין טור לטור */
+    flex-direction: row; 
+    flex-wrap: nowrap;  
+    gap: 20px;          
 }
 
-/* הטורים עצמם */
 .mapColumn {
-    flex-shrink: 0;      /* מונע מהטורים להתכווץ מתחת ל-305 פיקסלים */
+    flex-shrink: 0;      
     display: flex;
     flex-direction: column;
-    gap: 10px;           /* רווח בין הכפתורים בתוך הטור */
+    gap: 10px;           
 }
-
 
 
 .erroredInput {
