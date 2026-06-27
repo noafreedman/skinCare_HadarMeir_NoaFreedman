@@ -71,54 +71,43 @@
     </div>
 
 
-
     <main>
         <p class="narrowText">ברוכה הבאה לשאלון אבחון העור שלנו! עני על השאלות הבאות, והמערכת תתאים לך את המוצר המתאים ביותר עבורך, כדי שתקבלי עור קורן, בריא ורענן.</p>
-
         <div class="sideBySide">
-
             <section class="skinTypeForm">
                 <form>
-
                     <div class="form-group">
                         <label for="userName">מה שמך? <span class="required">*</span></label>
-                        <input type="text" id="userName" placeholder="הקלידי שם מלא..." required><br/><br/>
+                        <input type="text" id="userName" placeholder="הקלידי שם מלא..." onclick="checkFormValidity()" required><br/><br/>
                         <span class="erroredInput" id="userNameError"></span>
                     </div>
-
                     <div class="form-group">
                         <label>מהו סוג העור שלך? <span class="required">*</span></label>
                         <div class="radio-options">
-                            <label><input id="radio1" type="radio" name="skinType" value="acne" required> עור אקנתי עם פצעונים תקופתיים</label>
-                            <label><input id="radio2" type="radio" name="skinType" value="dry"> עור יבש ומתקלף </label>
-                            <label><input id="radio3" type="radio" name="skinType" value="oily"> עור שמן, מבריק עם נקבוביות פתוחות</label>
+                            <label><input id="radio1" type="radio" name="skinType" value="acne" onclick="updateSkinProductDisplay()" required> עור אקנתי עם פצעונים תקופתיים</label>
+                            <label><input id="radio2" type="radio" name="skinType" value="dry" onclick="updateSkinProductDisplay()"> עור יבש ומתקלף </label>
+                            <label><input id="radio3" type="radio" name="skinType" value="oily" onclick="updateSkinProductDisplay()"> עור שמן, מבריק עם נקבוביות פתוחות</label>
                         </div><br/>
                         <span class="erroredInput" id="radioError"></span>
-
                     </div>
-
                     <div class="form-group">
                         <label>סמני בעיות משניות שתרצי לטפל בהן (ניתן לבחור יותר מאחת):</label>
                         <div class="checkbox-options">
-                            <label><input type="checkbox" id="checkRedness" value="redness"> אדמומיות ועור רגיש או מגורה</label>
-                            <label><input type="checkbox" id="checkPigmentation" value="pigmentation"> פיגמנטציה, כתמי שמש או סימני פצעים</label>
+                            <label><input type="checkbox" id="checkRedness" value="redness" onclick="updateBoostersDisplay()"> אדמומיות ועור רגיש או מגורה</label>
+                            <label><input type="checkbox" id="checkPigmentation" value="pigmentation" onclick="updateBoostersDisplay()"> פיגמנטציה, כתמי שמש או סימני פצעים</label>
                         </div>
                     </div>
-
-                    <button type="button" id="formBtn" onclick="skinFormResult()">הציגי תוצאה</button>
+                    <button type="button" id="formBtn" onclick="skinFormResult()" disabled>הציגי תוצאה</button>
                 </form>
             </section>
 
             <section class="skinFormResult">
                 <div class="result-box">
                     <h3>מוצר חובה עבורך:</h3>
-
                     <div class="resultProductDisplay">
-                        <img src="img/toner.png" alt="טונר לעור אקנתי ושמן" id="imgAcneOily" class="acneSkinCare" style="display:none;">
-                        <img src="img/snail.png" alt="ריר חלזונות לעור יבש ופגוע" id="imgDry" class="acneSkinCare" style="display:none;">
-                        <p id="placeholderText">עני על השאלות כדי לקבל המלצה :)</p>
+                        <img src="img/toner.png" alt="טונר לעור אקנתי ושמן" id="imgAcneOily" class="acneSkinCare" >
+                        <img src="img/snail.png" alt="ריר חלזונות לעור יבש ופגוע" id="imgDry" class="acneSkinCare" >
                     </div>
-
                     <div class="treatment-boosters">
                         <div id="boosterCentella" class="booster-item">
                             <span> רכיב הרגעה מומלץ עבורך: Centella Asiatica</span>
@@ -127,13 +116,12 @@
                             <span> רכיב הבהרה מומלץ עבורך: Vitamin C / Niacinamide</span>
                         </div>
                     </div>
-
-                    <div id="diagnosticResultSummary" class="summary-output" style="display: none;">
+                    <div id="diagnosticResultSummary" class="summary-output">
                         <span id="nameForResult"></span><br/><br/>
                         <span id="skinForResult"></span><br/><br/>
                         <span id="rednessForResult"></span><br/><br/>
                         <span id="pigmentationForResult"></span><br/><br/>
-                        <span id="chosenProduct"></span>                        
+                        <span id="chosenProduct"></span>
                     </div>
                 </div>
             </section>

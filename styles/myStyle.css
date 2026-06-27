@@ -60,7 +60,7 @@ nav ul li .dropdown-menu {
     background-color: #fcfcfc;  
     list-style-type: none;     
     padding: 10px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
     border-radius: 8px;
 }
 
@@ -243,6 +243,7 @@ footer p {
     height: 150px;
     object-fit: contain;
     display: inline-block;
+    opacity: 0.5;
 }
 
 .purchase-buttons{
@@ -289,13 +290,19 @@ footer p {
 #formBtn {
     cursor: pointer;
 }
-
+#formBtn:disabled {
+    background-color: #cccccc !important;
+    color: #666666 !important;  
+    opacity: 0.5;                      
+    cursor: not-allowed;               
+    box-shadow: none;          
+}
 .pageBtn {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 0px;
+    padding: 10px 0;
     text-align: center;
     margin: 0;
 }
@@ -351,13 +358,15 @@ footer p {
 .tip-card, #diagnosticResultSummary {
     flex: 1;
     margin-top: 30px;
-
     min-width: 280px; 
     background-color: #fff0f3;
     border-right: 5px solid #ff6b8b; 
     border-radius: 8px;
     padding: 22px;
     box-shadow: 0 2px 5px rgba(255, 107, 139, 0.06);
+}
+#diagnosticResultSummary{
+    display: none;
 }
 
 
@@ -456,7 +465,9 @@ footer p {
     cursor: pointer;
     line-height: 1.5;
     text-align: right;
-    width: 100%;
+    width: max-content;
+    gap: 10px;
+    white-space: nowrap;
 }
 
 .radio-options input[type="radio"],
@@ -500,7 +511,8 @@ footer p {
 
 
 .booster-item {
-    display: none;
+    display: block;
+    opacity: 0.5;
     border: 1px solid #ff6b8b;
     padding: 14px;
     margin: 0;
