@@ -242,8 +242,7 @@ footer p {
     width: 150px;
     height: 150px;
     object-fit: contain;
-    display: inline-block;
-    opacity: 0.5;
+    display: none;
 }
 
 .purchase-buttons{
